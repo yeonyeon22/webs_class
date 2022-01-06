@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #e6e6e6;
+            border-width: 0px;
+            border-bottom-width: 1px;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            font-size: 40px;
+        }
+
+        .list1 li {
+            display: inline;
+        }
+
+        .list1 li a {
+            border: 1px solid #333;
+            padding: 8px 30px 5px 30px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .refer {
+            background: #000;
+            color: #fff;
+            padding: 2px 10px 0 8px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            background-color: #333;
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: 400;
+            padding: 3 10px 3 10px;
+            font-size: 24px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>자료형</h1>
+    <p>
+        모든 프로그래밍 언어는 내장 자료형이 있지만, 종종 이러한 내장 자료형은 언어마다 다르다. 이 문서에서는 자바스크립트의 내장 자료형과, 내장 자료형에서 사용할 수 있는 속성들에 대해 알아본다. 이로써
+        내장 자료형들로 더 복잡한 자료형을 만드는데 사용할 수 있을 것이다. 가능하다면 다른 언어와도 비교해보자.
+    </p>
+    <br>
+
+    <h2>동적 타이핑</h2>
+    <p>
+        자바스크립트는 느슨한 타입 (loosely typed) 언어, 혹은 동적 (dynamic) 언어이다. 그 말은, 변수의 타입을 미리 선언할 필요가 없다는 뜻이다. 타입은 프로그램이 처리되는 과정에서
+        자동으로 파악될 것이다. 또한 그 말은 같은 변수에 여러 타입의 값을 넣을 수 있다는 뜻이다.
+    </p>
+    <br>
+
+    <h2>Boolean 타입</h2>
+    <p>
+        Boolean 은 논리적인 요소를 나타내고, true 와 false 의 두 가지 값을 가질 수 있다.
+        <br>첫 번재 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 0, -0, null, false, NaN, undefined, 빈 문자열 ("")이라면 객체의 초기값은
+        false가 됩니다. 문자열 "false"를 포함한 그 외 모든 다른 값은 초기값을 true로 설정합니다.
+    </p>
+    <br>
+
+    <h2>Null 타입</h2>
+    <p>Null 타입은 딱 한 가지 값, null 을 가질 수 있다.
+        <br>null 값은 일반적으로 존재하지 않거나 유효하지 않은 object 또는 주소를 의도적으로 가리키는 참조를 나타냅니다. null 참조의 의미는 언어의 구현에 따라 다양하다. null은 동작이
+        원시적으로 보이기 때문에 primitive values 중 하나로 표시됩니다. 그러나 특정 경우에, null 은 처음 봤던것 만큼 "원시적"이지 않다. 모든 객체는 null 값으로 부터 파생되며 따라서
+        typeof 연산자는 아래의 코드에서 object를 반환한다.
+    </p>
+    <br>
+
+    <h2>Undefined 타입</h2>
+    <p>값을 할당하지 않은 변수는 undefined 값을 가진다. undefined는 원시값으로, 선언한 후 값을 할당하지 않은 변수 혹은 값이 주어지지 않은 인수에 자동으로 할당됩니다.
+    </p>
+    <br>
+
+    <h2>Number 타입</h2>
+    <p>숫자의 자료형은 배정밀도 64비트 형식 IEEE 754 값 (-(2^53 -1) 와 2^53 -1 사이의 숫자값) 단 하나만 존재한다. 정수만을 표현하기 위한 특별한 자료형은 없다. 부동 소수점을 표현할
+        수 있는 것 말고도, Number 타입은 세 가지 의미있는 몇가지 상징적인 값들도 표현할 수 있다. 이 값에는 +Infinity, -Infinity, and NaN ("Not a Number")이
+        있다.
+        +/-Infinity 보다 크거나 작은지 확인하는 용도로 상수값인 Number.MAX_VALUE 나 Number.MIN_VALUE 을 사용할 수 있다.
+    </p>
+    <br>
+
+    <h2>BigInt 타입</h2>
+    <p>
+        BigInt 타입은 임의 정밀도로 정수를 나타낼 수 있는 자바스크립트의 숫자 원시 형식이다. BigInt를 사용하면 Number의 정수 한계를 넘어서는 큰 정수도 안전하게 저장 및 연산할 수 있다.
+        BigInt는 정수 끝에 n을 추가하거나 생성자를 호출하여 생성된다. BigInt의 도입으로, 다음의 Number.MAX_SAFE_INTEGER로 작업할 수 있으며 상수
+        Number.MAX_SAFE_INTEGER를 사용하여 숫자로 증가시킬 수 있는 가장 안전한 값을 얻을 수 있다.
+    </p>
+    <br>
+
+    <h2>String 타입</h2>
+    <p>
+        자바스크립트의 String 타입은 텍스트 데이터를 나타내는데 사용한다. 이는 16비트 부호없는 정수 값 요소들의 집합이다. String의 각 요소는 String의 위치를 차지한다. 첫 번째 요소는 0번
+        인덱스에 있고, 다음 요소는 1번, 그 다음 요소는 2번... 같은 방식이다. String 의 길이는 String이 가지고있는 요소의 갯수이다. C 같은 언어와는 다르게, 자바스크립트의 문자열은 변경
+        불가능 (immutable) 하다. 이것은 한 번 문자열이 생성되면, 그 문자열을 수정할 수 없다는걸 의미한다. 그러나 원래 문자열에서 일부가 수정된 다른 문자열을 만드는건 가능하다.
+    </p>
+    <br>
+
+    <h2>Symbol 타입</h2>
+    <p>
+        Symbol 은 ECMAScript 6 에서 추가되었다. Symbol은 유일하고 변경 불가능한 (immutable) 기본값 (primitive value) 이다. 또한, 객체 속성의 key 값으로도
+        사용될 수 있다 (아래를 볼 것). 몇몇 프로그래밍 언어에서는 Symbol을 atom 이라고 부른다. 또, C 언어의 이름있는 열거형 (enum) 과도 비슷하다.
+    </p>
+
+
+</body>
+
+</html>
