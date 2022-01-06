@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@
                 url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
             font-display: swap;
         }
+
         @font-face {
             font-family: 'NexonLv1Gothic';
             font-weight: 400;
@@ -28,6 +30,7 @@
                 url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
             font-display: swap;
         }
+
         @font-face {
             font-family: 'NexonLv1Gothic';
             font-weight: 700;
@@ -39,22 +42,27 @@
                 url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
             font-display: swap;
         }
+
         * {
             margin: 0;
             padding: 0;
             font-family: 'NexonLv1Gothic';
             line-height: 1.6;
         }
+
         body {
             padding: 5%;
         }
+
         li {
             list-style: none;
         }
+
         a {
             text-decoration: none;
             color: #333;
         }
+
         hr {
             margin: 5% 0;
             border-style: dashed;
@@ -62,13 +70,16 @@
             border-width: 0px;
             border-bottom-width: 1px;
         }
+
         h1 {
             padding-bottom: 20px;
             font-size: 50px;
         }
+
         .list1 li {
             display: inline;
         }
+
         .list1 li a {
             border: 1px solid #333;
             padding: 8px 30px 5px 30px;
@@ -76,12 +87,14 @@
             display: inline-block;
             margin-bottom: 10px;
         }
+
         .refer {
             background: #000;
             color: #fff;
             padding: 2px 10px 0 10px;
             border-radius: 30px;
         }
+
         h2 {
             margin-top: 30px;
             background-color: #000;
@@ -92,9 +105,11 @@
             padding: 3px 10px 0 10px;
             font-size: 24px;
         }
+
         .sample {
             border-radius: 5px;
         }
+
         .sample h3 {
             background: #f2f2f2;
             font-size: 16px;
@@ -102,9 +117,10 @@
             border-radius: 5px 5px 0 0;
             border: 1px solid #e6e6e6;
         }
+
         .sample pre {
             margin: 0 !important;
-            border-radius: 0 0 5px 5px !important ;
+            border-radius: 0 0 5px 5px !important;
         }
     </style>
     <link rel="stylesheet" href="../assets/css/prism.css">
@@ -147,34 +163,121 @@
     <div>
         <a href="reference01.html" class="refer">기초문법</a>
     </div>
-    
+
     <hr>
+
     <!-- sample1 -->
     <div id="sample1" class="sample">
-        <h3>01. 변수 : 데이터 저장</h3>
+        <h3>01. 변수 : 데이터 불러오기</h3>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">
+{
     let x = 100, 
         y = 200, 
         z = "javascript";
+        
     document.write("*** 01. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
-}</code></pre>
+}
+            </code></pre>
         </div>
     </div>
     <!-- //sample1 -->
+
     <hr>
+    
+<!-- sample2 -->
+    <div id="sample2" class="sample">
+        <h3>02. 상수 : 데이터 불러오기</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+{
+    const x = 100,
+          y = 200,
+          z = "javascript";
+
+    document.write("*** 02. 상수 ***");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+            </code></pre>
+        </div>
+    </div>
+    <!-- //sample2 -->
+
     <hr>
+
+    <!-- sample3 -->
+    <div id="sample3" class="sample">
+        <h3>배열 : 데이터 불러오기</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+{
+    const arr = [100, 200, "javascript"];
+
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+}
+            </code></pre>
+        </div>
+    </div>
+    <!-- //sample3 -->
+
     <hr>
+
+    <!-- sample4 -->
+    <div id="sample4" class="sample">
+        <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+{
+    const arr = [100, 200, ["javascript", "jquery"]];
+
+    document.write("*** 04. 배열 : 2차 배열 ***");
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+    document.write(arr[2][0]);
+    document.write(arr[2][1]);
+}
+            </code></pre>
+        </div>
+    </div>
+    <!-- //sample4 -->
+
+    <hr>
+
+    <!-- sample5 -->
+    <div id="sample5" class="sample">
+        <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+{
+    const arr = [100, 200, "javascript"];
+
+    document.write("*** 05. 배열 : 객수 구하기");
+    document.write(arr.length);
+}
+            </code></pre>
+        </div>
+    </div>
+    <!-- //sample5 -->
+
+    <hr>
+
+
+
     <script src="../assets/js/prism.js"></script>
     <!-- Javascript -->
     <script>
         //01. 변수 : 데이터 불러오기
         {
-            let x = 100, 
-                y = 200, 
+            let x = 100,
+                y = 200,
                 z = "javascript";
             document.write("<br>*** 01. 변수 ***<br>");
             document.write(x, "<br>");
@@ -217,4 +320,5 @@
         }
     </script>
 </body>
+
 </html>
