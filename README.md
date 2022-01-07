@@ -4,4 +4,5 @@
 https://yeonyeon22.github.io/webs_class/
 
 ## 자바스크립트
-https://yeonyeon22.github.io/webs_class/script/index.html
+https://yeonyeon22.github.io/webs_class/javascript/index.html
+
