@@ -154,6 +154,8 @@ a {
     padding: 7px 15px 5px 15px;
     display: inline-block;
     margin-bottom: 5px;
+    border-radius: 10px 10px 10px 10px;
+
 }
 .note a:hover{
     text-decoration: underline;
