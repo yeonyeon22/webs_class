@@ -47,20 +47,18 @@
                 <li>11. 객체 : 데이터를 저장(키와 값) : 표현 방법 2</li>
                 <li>12. 객체 : 데이터를 저장(키와 값) : 표현 방법 3</li>
                 <li>13. 객체 : 데이터를 저장(키와 값) : 표현 방법 4</li>
-                <li>14. 객체 : 데이터를 저장(키와 값) : 표현 방법 5</li>
-                <li>15. 객체 : 데이터를 저장(키와 값) : 표현 방법 6</li>
-                <li>16. 객체 : 데이터를 저장(키와 값) : 표현 방법 7</li>
-                <li>17. 객체 : 데이터를 저장(키와 값) : 표현 방법 8</li>                
+                <li>14. 객체 : 데이터를 저장(키와 값) : 표현 방법 5 : 배열 속의 객체</li>
+                <li>15. 객체 : 데이터를 저장(키와 값) : 표현 방법 6 : 객체 속의 배열</li>
+                <li>16. 객체 : 데이터를 저장(키와 값) : 표현 방법 7 : 객체 속의 변수</li>
+                <li>17. 객체 : 데이터를 저장(키와 값) : 표현 방법 8 : 객체 속의 함수</li>                
             </ul>
         </div>
         <!-- //list -->
 
         <div class="note">
             <a href="reference01.html">기초 문법</a>
-            <a href="reference01.html">변수</a>
-            <a href="reference01.html">자료형</a>
-            <a href="reference01.html">식별자/키워드</a>
-            <a href="reference01.html">객체</a>
+            <a href="reference02.html">변수</a>
+            <a href="reference03.html">자료형</a>
         </div>
         <!-- //note -->
 
@@ -71,9 +69,9 @@
                 <h3>01. 변수 : 데이터 저장</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    var x = 100; //변수 x에 숫자 100을 저장
-    var y = 200; //변수 y에 숫자 200을 저장
-    var z = "javascript"; //변수 z에 문자 javascript를 저장
+    var x = 100;            //변수 x에 숫자 100을 저장
+    var y = 200;            //변수 y에 숫자 200을 저장
+    var z = "javascript";   //변수 z에 문자 javascript를 저장
 
     document.write("*** 01. 변수 ***");
     document.write(x);
@@ -89,13 +87,13 @@
                 <h3>02. 변수 : 데이터 저장 + 데이터 변경</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    let x = 100; // 변수 x에 숫자 100을 저장
-    let y = 200; // 변수 y에 숫자 200을 저장
-    let z = "javascript"; // 변수 z에 문자 Javascrip를 저장
+    let x = 100;            // 변수 x에 숫자 100을 저장
+    let y = 200;            // 변수 y에 숫자 200을 저장
+    let z = "javascript";   // 변수 z에 문자 javascript를 저장
 
-    x = 300; //변수 x의 값 300으로 변경
-    y = 400; //변수 y의 값 400으로 변경
-    z = "jquery"; //변수 z의 값 "jquery"로 변경
+    x = 300;                // 변수 x의 값 300으로 변경
+    y = 400;                // 변수 y의 값 400으로 변경
+    z = "jquery";           // 변수 z의 값 "jquery"로 변경
 
     document.write("*** 02. 변수 ***");
     document.write(x);
@@ -133,14 +131,28 @@
                 <h3>04. 변수 : 변수의 종류 : 지역변수 + 전역변수 + 매개변수</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    let x = 100;
-    let y = 200;
-    let z = "Javascript";
+    document.write("*** 04. 변수: 변수의 종류 ***");
 
-    document.write("*** 04. 변수의 종류 ***");
-    document.write(x);
-    document.write(y);
-    document.write(z);
+    let x = 100;    //전역변수
+    let y = 200;    //전역변수
+
+    function func(){
+        let x = 100;    //지역변수
+        let y = "javascript";
+        x = 200;        //지역변수 100 -> 200
+        y = 200;        //전역변수 200 -> 300
+
+        document.write("함수 안");
+        document.write(x);
+        document.write(y);
+        document.write(z);
+    }    
+        func();
+
+        document.write("함수 밖");
+        document.write(x);
+        document.write(y);
+        document.write(z);
 }</code></pre>
                 </div>
             </div>
@@ -153,7 +165,11 @@
 <pre class="line-numbers"><code class="language-js">{
     const x = 100;
     const y = 200;
-    const z = "JavaScript";
+    const z = "javaScript";
+
+    //x = 300;
+    //y = 400;
+    //z = "Jquery";
 
     document.write("*** 05. 상수***");
     document.write(x);
@@ -172,7 +188,7 @@
     const arr = new Array();
     arr[0] = 100;
     arr[1] = 200;
-    arr[2] = "JavaScript";
+    arr[2] = "javascript";
 
     document.write("*** 06. 배열 ***");
     document.write(arr[0]);
@@ -188,7 +204,7 @@
                 <h3>07. 배열 : 여러개의 데이터를 저장 : 표현 방법 2</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = new Array(100, 200, "JavaScript");
+    const arr = new Array(100, 200, "javascript");
 
     document.write("*** 07.배열 ***");
     document.write(arr[0]);
@@ -207,7 +223,7 @@
     const arr = [];
     arr[0] = 100;
     arr[1] = 200;
-    arr[2] = "JavaScript";
+    arr[2] = "javascript";
 
     document.write("*** 08. 배열 ***");
     document.write(arr[0]);
@@ -223,7 +239,7 @@
                 <h3>09. 배열 : 여러개의 데이터를 저장 : 표현 방법 4</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = [100, 200, "Javascript"];
+    const arr = [100, 200, "javascript"];
 
     document.write("*** 09. 배열 ***");
     document.write(arr[0]);
@@ -242,7 +258,7 @@
     const obj = new Object();
     obj[0] = 100;
     obj[1] = 200;
-    obj[2] = "JavaScript";
+    obj[2] = "javascript";
 
     document.write("*** 10. 객체***");
     document.write(obj[0]);
@@ -261,7 +277,7 @@
     const obj = new Object();
     obj.a = 100;
     obj.b = 200;
-    obj.c = "JavaScript";
+    obj.c = "javascript";
     
     document.write("*** 11. 객체 ***");
     document.write(obj.a);
@@ -280,7 +296,7 @@
     const obj = {};
     obj.a = 100;
     obj.b = 200;
-    obj.c = "JavaScript";
+    obj.c = "javascript";
 
     document.write("*** 12. 객체 ***");
     document.write(obj.a);
@@ -299,7 +315,7 @@
     const obj = {
         a : 100,
         b : 200,
-        c : "JavaScript"
+        c : "javascript"
     };
 
     document.write("*** 13. 객체 ***");
@@ -330,7 +346,6 @@
             </div>
             <!-- //sample14 -->
 
-
             <!-- sample15 -->
             <div id="sample15" class="sample">
                 <h3>15. 객체 : 데이터를 저장(키와 값) : 표현 방법 6</h3>
@@ -340,7 +355,7 @@
        a: 100,
        b: [200, 300],
        c: {x: 400, y: 500},
-       d: "JavaScript"
+       d: "javascript"
    }
 
     document.write("*** 15. 객체 ***");
@@ -386,38 +401,38 @@
         c: {x:400, y:500},
         d: "javascript",
         e: function(){
-            document.write("javascript가 실행되었습니다.")
+            document.write("javascript가 실행되었습니다.");
         }
         f: function(){
-            document.write(obj.d + "가 실행되었습니다.")
+            document.write(obj.d + "가 실행되었습니다.");
         }
-        g: fuction(){
-            document.write(this.d + "가 실행되었습니다.")
+        g: function(){
+            document.write(this.d + "가 실행되었습니다.");
         }
     }
+
+    document.write("*** 17. 객체 ***");
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.b[0]);
+    document.write(obj.b[1]);
+    document.write(obj.c.x);
+    document.write(obj.c.y);
+    document.write(obj.d);
+    obj.e();
+    obj.f();
+    obj.g();
 }</code></pre>
                 </div>
             </div>
-            <!-- //sample17 -->
-
-
-            
-
-
-
-
-
+            <!-- //sample17 -->     
 
         </div>
         <!-- //script -->
     </main>
 
-
-
     <!-- script -->
     <script>
-
-
         //01. 변수 : 데이터 저장소
         {
             var x = 100; //변수 x에 숫자 100을 저장
@@ -435,6 +450,7 @@
             let x = 100;
             let y = 200;
             let z = "javascript";
+
             x = 300;
             y = 400;
             z = "jquery";
@@ -461,7 +477,7 @@
             document.write(z, "<br>");
         }
 
-        //04. 변수 : 변수의 종류 : 지역변수 + 전역변수 + 매개변수
+        //04. 변수 : 변수의 종류 : 지역변수 + 전역변수
         {
             //변수 : 데이터 저장
             //함수 : 데이터 실행
@@ -477,14 +493,14 @@
                 x = 200;        //지역변수 100->200
                 y = 300;        //전역변수 200->300     
 
-                document.write("함수 안<br>");
+                document.write("<br>함수 안<br>");
                 document.write(x, "<br>");
                 document.write(y, "<br>");
                 document.write(z, "<br>");
             }
             func();    
             
-                document.write("함수 밖<br>");
+                document.write("<br>함수 밖<br>");
                 document.write(x, "<br>");
                 document.write(y, "<br>");
                 document.write(z, "<br>");
@@ -524,7 +540,7 @@
 
         // 07. 배열 : 여러개의 데이터를 저장 : 표현 방법2
         {
-            const arr = new Array(100, 200, "Javascript");
+            const arr = new Array(100, 200, "javascript");
 
             document.write("<br>*** 07. 배열 ***<br>");
             document.write(arr[0], "<br>");
@@ -544,11 +560,11 @@
             document.write(arr[0], "<br>");
             document.write(arr[1], "<br>");
             document.write(arr[2], "<br>");
-
         }
+
         // 09. 배열 : 여러개의 데이터를 저장 : 표현 방법4
         {
-            const arr = [100, 200, "Javascrip"];
+            const arr = [100, 200, "javascript"];
 
             document.write("<br>*** 09. 배열 ***<br>");
             document.write(arr[0], "<br>");
@@ -606,19 +622,20 @@
             document.write(obj.c, "<br>");
         }
 
-        // 14. 객체 : 데이터를 저장 (키와 값) : 표현방법5 : 배열 속에 객체
+        // 14. 객체 : 데이터를 저장 (키와 값) : 표현방법5 : 배열 속의 객체
         {
             const obj = [
                 {a: 100, b: 200},
                 {c: "javascript"}
             ];
+
             document.write("<br>*** 14. 객체 ***<br>");
             document.write(obj[0].a, "<br>");
             document.write(obj[0].b, "<br>");
             document.write(obj[1].c, "<br>");
         }
 
-        // 15. 객체 : 데이터를 저장 (키와 값) : 표현방법6
+        // 15. 객체 : 데이터를 저장 (키와 값) : 표현방법6 : 객체 속의 배열
         {
             const obj = {
                 a: 100,
@@ -635,8 +652,7 @@
                 document.write(obj.d, "<br>");            
         }
 
-
-        // 16. 객체 : 데이터를 저장 (키와 값) : 표현방법7 : 객체 속에 변수
+        // 16. 객체 : 데이터를 저장 (키와 값) : 표현방법7 : 객체 속의 변수
         {
             const a = 100;
             const b = 200;
@@ -645,12 +661,12 @@
             const obj = { a, b, c }  
             
             document.write("<br>*** 16. 객체 ***<br>");
-            document.write(obj.a, "br");
-            document.write(obj.b, "br");
-            document.write(obj.c, "br");           
+            document.write(obj.a, "<br>");
+            document.write(obj.b, "<br>");
+            document.write(obj.c, "<br>");           
         }
 
-        // 17. 객체 : 데이터를 저장 (키와 값) : 표현방법8 : 객체 속에 함수
+        // 17. 객체 : 데이터를 저장 (키와 값) : 표현방법8 : 객체 속의 함수
         {
             const obj = {
                 a: 100,
@@ -658,18 +674,17 @@
                 c: {x: 400, y: 500},
                 d: "javascript",
                 e: function(){
-                    document.write("javascript가 실행되었습니다.");
-                }
+                    document.write("javascript가 실행되었습니다.<br>");
+                },
                 f: function(){
                     document.write(obj.d + "가 실행되었습니다. <br>");
-                }
+                },
                 g: function(){
                     document.write(this.d + "가 실행되었습니다. <br>");
                 }
             }
 
-            document.write("<br>*** 16. 객체 ***<br>");              
-            
+            document.write("<br>*** 17. 객체 ***<br>");      
             document.write(obj.a, "<br>"); //100
             document.write(obj.b, "<br>"); //200,300
             document.write(obj.b[0], "<br>"); //200
@@ -677,16 +692,13 @@
             document.write(obj.c.x, "<br>"); //400
             document.write(obj.c.y, "<br>"); //500
             obj.e();
-            obj.d();
-            obj.e(); 
-            //javascript가 실행되었습니다.
+            obj.f();
+            obj.g();            
         }
-
-
         // 변수 + 상수 + 배열 + 객체 : You need to master these things.
-
-    </script>
-
+        </script>        
+        <!-- //script -->
+    </main>
 
 </body>
 
