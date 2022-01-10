@@ -129,7 +129,7 @@ a {
 }
 
 @media (max-width: 800px){
-    #main{
+    #main {
         padding: 20px;
     }
     .list {
@@ -142,11 +142,11 @@ a {
 }
 
 /* note */
-.note{
+.note {
     padding: 40px 0;
     border-bottom: 1px dotted #cdcdcd;
 }
-.note a{
+.note a {
     font-size: 16px;
     background: #000;
     color: #fff;
@@ -155,8 +155,8 @@ a {
     display: inline-block;
     margin-bottom: 5px;
     border-radius: 10px 10px 10px 10px;
-
 }
+
 .note a:hover{
     text-decoration: underline;
 }
@@ -197,6 +197,26 @@ a {
         margin-bottom: 40px;
     }
 
+    .script .sample h3 {
+        background: #f2f2f2;
+        font-size: 16px;
+        padding: 15px 20px 10px 20px;
+        border-radius: 5px 5px 0 0;
+        border: 1px solid #e6e6e6;
+        font-weight: 500;
+    }
+    .script .sample .code pre {
+        margin: 0 !important;
+        border-radius: 0 0 5px 5px;
+    }
+
+@media (max-width800px){
+    .script {
+        padding: 20px 0;
+    }
+    .script .sample {
+        margin-bottom: 40px;
+    }
     .script .sample h3 {
         font-size: 14px;
         padding: 10px 15px 8px 15px;
@@ -247,3 +267,43 @@ a {
     padding: 2px ;
     display: inline-block;
 }
+
+@media (max-width: 800px){
+    .doc .line {
+        font-size: 14px;
+    }
+    .doc .code {
+        font-size: 14px;
+    }
+}
+
+/* result */
+.result h4 {
+    background: #f2f2f2;
+    padding: 10px;
+    font-weight: normal;
+    margin-top: 10px; 
+    font-size: 16px;   
+}
+
+.result div {
+    background: #272822;
+    border-radius: 20px;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;  
+    line-height: 1.4;
+}
+
+@media (max-width: 800px){
+    .result h4 {
+    font-size: 14px;
+    padding: 10px 15px ;    
+    }
+    .result div {
+    font-size: 14px;
+    padding: 15px;
+    }
+}
+    
+
