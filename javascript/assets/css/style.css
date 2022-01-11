@@ -344,6 +344,7 @@ a {
     box-sizing: border-box;
     position: absolute;
     left: 0; top: 0;
+    z-index: ;
     border-radius: 13px;
 }
 .javascript h1 {
@@ -370,3 +371,9 @@ a {
     color: #fff;
 }
 
+@media (max-width: 800px){
+    .javascript h1 {
+        font-size: 55px;
+        padding: 10px 0;
+    }
+}

@@ -10,8 +10,9 @@
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../assets/face/kim128.jpg">
     <link rel="apple-touch-icon-precomposed" href="../assets/face/kim128.png">
-    <link rel="icon" href="../assets/face/kim128.png" sizes="128x128">
-
+    <link rel="icon" href="../assets/face/kim128.png" sizes="128x128">    
+    
+    <!-- CSS -->
     <style>
         @font-face {
             font-family: 'GmarketSans';
@@ -64,6 +65,10 @@
             justify-content: space-between;
             align-items: flex-end;
             border-bottom: 1px solid #000;
+            position: fixed;
+            left: 0; top: 0;
+            width: 100%;
+            background-color: #f5f5f5;
         }
 
         #header h1 {
@@ -77,14 +82,15 @@
         }
 
         #contents {
-            width: 1200px;
+            max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
         }
 
         #contents h2 {
             font-size: 80px;
             text-align: center;
-            padding: 5% 5% 5% 5%;
+            padding: 12% 5% 5% 5%;
         }
 
         #contents h2 em {
@@ -126,17 +132,70 @@
             color #fff;
             cursor: grab;
         }
+
+        #contents .menu {
+            margin-bottom: 5px;
+        }            
+        #contents .menu ul li {
+            list-style: none;
+            display: inline;
+        }
+        #contents .menu ul li a {
+            text-decoration: none;
+            background: #00db72;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+
+        @media (max-width: 800px){
+            #header h1 {
+                font-size: 18px;
+                padding: 20px 10px 5px 16px;
+            }
+            #header strong {
+                font-size: 16px;
+                padding: 20px 10px 5px 16px;
+            }
+            #contents h2 {
+                font-size: 40px;
+                padding: 10px;
+            }
+            #contents .refer {
+                margin: 5px;
+                background: transparent;
+                padding: 10px;
+            }
+            #contents .refer table th {
+                padding: 10px;
+                background: #683d3d;
+            }
+            #contents .refer table td {
+                padding: 10px;
+                line-height: 1.4;
+            }       
+
+        }
     </style>
 </head>
 
 <body>
     <header id="header">
-        <h1>Line Middleschool codingclass Grade 1</h1>
+        <h1>Codingclass</h1>
         <strong>Yeon</strong>
     </header>
 
     <main id="contents">
         <h2>HTML <em>reference book</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li> 
+                <li><a href="reference02html">웹표준/웹접근성/웹호환성</a></li> 
+            </ul>            
+        </div>
+    <!-- //menu -->
+
         <section class="refer">
             <table>
                 <caption>HTML 레퍼런스 속성과 설명을 나타내는 표입니다.</caption>
@@ -146,8 +205,8 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <td>설명</td>
-                        <td>속성</td>
+                        <th>설명</th>
+                        <th>속성</th>
                     </tr>
                 </thead>
                 <tbody>
