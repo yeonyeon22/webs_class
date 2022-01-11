@@ -15,8 +15,8 @@
 </head>
 <body>
     <header id="header">
-        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
-        <strong>웹스토리보이</strong>
+        <h1><a href="#">coding class</a></h1>
+        <strong>Yeon</strong>
     </header>
     <main id="contents">
         <h2><a href="css.html">CSS <em>기초 문법</em></a></h2>
@@ -30,29 +30,56 @@
             </ul>
         </div>
         <!-- //menu -->
+
         <div class="refer">
             <div class="doc">
                 <h3>CSS란?</h3>
                 <p>CSS 변하는 데이터(값)을 저장할 수 있는 메모리 공간 변수에는 데이터가 오직 한 개만 저장된다. 새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 된다. 변수에 저장할 수 있는 데이터의 종류로는 문자형(Srting), 숫자형(Number), 논리형(Boolean), 그리고 빈(Null) 데이터가 있다.</p>
+                
                 <h3>CSS 주석 표시</h3>
                 <div class="code">
-<pre><code>{/* CSS 주석 */</pre></code>
+<pre class="line-numbers"><code class="language-js">{
+
+    /* CSS 주석 */
+    
+}</pre></code>
                 </div>
+
                 <h3>CSS 선언 방법</h3>
-                <h4>내부 스타일</h4>
-                <p>.......</p>
+                <h4>내부 스타일 시트(Internal Style Sheet)</h4>
+                <p>HTML문서내에서 <head>와 </head>사이에 스타일을 정의하는 방법입니다.</p>
                 <div class="code">
-                    code..
+<pre class="line-numbers"><code class="language-js">{
+
+    <head>
+        <style type="text/css">
+            body {font-size: 9px;}
+        </style>
+    </head>
+
+}</code></pre>
                 </div>
-                <h4>외부 스타일</h4>
-                <p>.......</p>
+
+                <h4>외부 스타일 시트(External Style Sheet)</h4>
+                <p>css라는 확장자를 가진 스타일 시트 파일을 만들고 이 파일을 HTML 문서에 연결하여 사용하는 방법입니다.</p>
                 <div class="code">
-                    code..
+<pre class="line-numbers"><code class="language-js">{
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+
+}</code></pre>
                 </div>
-                <h4>인라인 스타일</h4>
-                <p>.......</p>
+
+                <h4>HTML태그내에 스타일 지정(Inline Styles)</h4>
+                <p>위의 방법들에 비해서 적용범위가 더욱 좁아진 형태입니다. 스타일을 적용하고 싶은 HTML태그안에서 정의하는 방법입니다.</p>
                 <div class="code">
-                    code..
+<pre class="line-numbers"><code class="language-js">{
+
+    <p style="color:gray;">이 문단의 색상은 회색으로 지정됩니다.</p>
+
+}</code></pre>
                 </div>
             </div>
         </div>

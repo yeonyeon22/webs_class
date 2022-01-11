@@ -344,7 +344,7 @@ a {
     box-sizing: border-box;
     position: absolute;
     left: 0; top: 0;
-    z-index: ;
+    z-index: -1;
     border-radius: 13px;
 }
 .javascript h1 {
