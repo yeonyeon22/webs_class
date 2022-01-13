@@ -47,16 +47,14 @@
 
                 <h3>CSS 선언 방법</h3>
                 <h4>내부 스타일 시트(Internal Style Sheet)</h4>
-                <p>HTML문서내에서 <head>와 </head>사이에 스타일을 정의하는 방법입니다.</p>
+                <p>HTML문서내에서 &lt;head&gt;와 &lt;/head&gt;사이에 스타일을 정의하는 방법입니다.</p>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-
-    <head>
-        <style type="text/css">
+    &lt;head&gt;
+        &lt;style type="text/css"&gt;
             body {font-size: 9px;}
-        </style>
-    </head>
-
+        &lt;/style&gt;
+    &lt;/head&gt;
 }</code></pre>
                 </div>
 
@@ -64,11 +62,9 @@
                 <p>css라는 확장자를 가진 스타일 시트 파일을 만들고 이 파일을 HTML 문서에 연결하여 사용하는 방법입니다.</p>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-
-    <head>
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
-    </head>
-
+    &lt;head>&gt;
+        &lt;link rel="stylesheet" type="text/css" href="mystyle.css">&gt;
+    &lt;/head>&gt;
 }</code></pre>
                 </div>
 
@@ -76,9 +72,7 @@
                 <p>위의 방법들에 비해서 적용범위가 더욱 좁아진 형태입니다. 스타일을 적용하고 싶은 HTML태그안에서 정의하는 방법입니다.</p>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-
-    <p style="color:gray;">이 문단의 색상은 회색으로 지정됩니다.</p>
-
+    &lt;p style="color:gray;"&gt;이 문단의 색상은 회색으로 지정됩니다.&lt;/p&gt;
 }</code></pre>
                 </div>
             </div>
