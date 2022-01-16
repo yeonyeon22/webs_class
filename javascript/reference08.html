@@ -50,6 +50,7 @@
     &lt;/script&gt;
 }</pre></code>
             </div>
+
             <div class="code">
                 <p>예시 :</p>
 <pre class="line-numbers"><code class="language-js">{
@@ -85,10 +86,10 @@
                 <p>예시 :</p>
 <pre class="line-numbers"><code class="language-js">{
     &lt;script&gt;
-        var func = function( ) {
+        var theFunc = function( ) {
             alert('This is anonymous function');
         };
-        func( );
+        theFunc( );
     &gt;/script&gt;
 }</pre></code>
             </div>
@@ -107,6 +108,19 @@
     함수명(데이터1, 데이터2,... 데이터n);
 }</pre></code>
             </div>
+
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function myFnc(name,area){
+        document.write("안녕하세요."+name+"입니다","<br>");
+        documet.write("사는 곳은"+area+"입니다.","<br><br>");
+    }
+    myFnc("홍당무","서울"); //안녕하세요. 홍당무입니다. 
+                            //사는 곳은 서울입니다. 
+    myFnc("깍두기","부산"); //안녕하세요. 깍두기입니다. 
+                            //사는 곳은 부산입니다.
+}</pre></code>
+            </div>	
 
             <h3>리턴값 함수</h3>
             <p>return문은 함수에서 결과값을 반환할 때 사용합니다. 

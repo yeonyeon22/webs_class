@@ -54,10 +54,19 @@
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     if(조건식){
-    &nbsp;&nbsp;&nbsp;&nbsp;자바스크립트 코드;
+    자바스크립트 코드;
     }
 }</pre></code>
             </div>
+
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    var num=10;
+    if(num&lt;500){ //true
+        document.write("hello");
+    }
+}</pre></code>
+            </div>	
 
             <h4>else문</h4>
             <p>
@@ -75,12 +84,24 @@
 }</pre></code>
             </div>
 
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    var num=prompt("당신이 좋아하는 숫자는?", "0");
+
+    if(num%2==0){   //짝수일 경우에 실행
+        document.write("당신이 좋아하는 숫자는 짝수입니다.");        
+    }else{
+        document.write("당신이 좋아하는 숫자는 홀수입니다.");
+    }
+}</pre></code>
+            </div>	
+
             <h4>else if 문</h4>
             <p>
                 else if 문은 두 가지 이상의 조건식과 정해 놓은 조건을 만족하지 않았을 때 실행되는 코드로 이루어져 있습니다.
                 다음은 else if문의 기본형입니다.
                 가장 위에 있는 조건식1부터 5까지 차례로 조건 검사를 하면서 만족(true)하는 값이 나오면 그에 해당하는 코드를 실행하고 조건문을 종료합니다.
-                조건식 중 만족(true)하는 값이 하나도 없으면 else 문의 중괄호{...}에 있는 코드를 실행ㅎ압니다.
+                조건식 중 만족(true)하는 값이 하나도 없으면 else 문의 중괄호{...}에 있는 코드를 실행합니다.
             </p>
 
             <div>
@@ -101,12 +122,29 @@
 }</pre></code>
             </div>
 
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    var mon=prompt("현재는 몇 월입니까?","0";
+    
+    if(mon&gt;=9&&mon&lt;=11){
+        document.write("독서의 계절 가을이네요!");        
+    }else if(mon&gt;=6&&mon&lt;=8){
+        document.write("여행가기 좋은 여름이네요!");        
+    }else if(mon&gt;=3&&mon&lt;=5){
+        document.write("햇살 가득한 봄이네요!");
+    }else{
+        document.write("스키의 계절 겨울이네요!");
+    }
+}</pre></code>
+            </div>	
+
             <h4>중첩 if문</h4>
             <p>
-                조건문 안에 조건문이 있으면 중첩if문이라고 합니다.
-                중첩 if문의 기본형은 다음과 같습니다.
+                조건문 안에 조건문이 있으면 중첩if문이라고 합니다.<br>
+                중첩 if문의 기본형은 다음과 같습니다.<br>
+                중첩 if문은 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다.<br>
+                만일 안쪽 if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에 있는 코드만 실행하고 종료됩니다.
             </p>
-
 
             <div class="code">
                 <pre class="line-numbers"><code class="language-js">{
@@ -117,10 +155,28 @@
     }    
 }</pre></code>
             </div>
-            <p>
-                중첩 if문은 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다.
-                만일 안쪽 if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에 있는 코드만 실행하고 종료됩니다.
-            </p>
+
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    var id="easy1004";   //아이디
+    var pw="112233";     //비밀번호
+    
+    var user_id=prompt("아이디는?","");     //아이디 입력
+    var user_pw=prompt("비밀번호는?","");   //비밀번호 입력
+
+    if(id==user_id){
+        if(pw==user_px){
+            document.write(user_id+"님 반갑습니다!");
+        }else{
+            alert("비밀번호가 일치하지 않습니다.");
+            location.reload();
+        }else{
+            alert("아이디가 일치하지 않습니다");
+            location.reload();
+        }
+    }
+}</pre></code>
+            </div>
 
         </div>
     </main>
