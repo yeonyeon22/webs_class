@@ -389,7 +389,7 @@ a {
 
 /* test */
 .test {
-    width: 1000px;
+    max-width: 1000px;
     width: 100%;
     margin: 100px auto;
 }
@@ -406,11 +406,12 @@ a {
     line-height: 1.6;
 }
 .test p {
-    font-size: 1rem;
-    line-height: 1.6;
-    padding-left: 1em;
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
-
+.test .code{
+    margin-top:1em;
+}
 
 
 
