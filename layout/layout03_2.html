@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout3_2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1200;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #C8E6C9;
+        }
+        #nav {
+            width: 1200px;
+            display: flex;
+        }
+        #nav .nav1 {
+            width: 400px;
+            height: 100px;
+            background-color: #A5D6A7;
+        }
+        #nav .nav2 {
+            width: 400px;
+            height: 100px;
+            background-color: #81C784;
+        }
+        #nav .nav3 {
+            width: 400px;
+            height: 100px;
+            background-color: #A5D6A7;
+        }
+        
+        #contents {
+            width: 1200px; 
+            height: 780px;          
+            display: flex;
+        }
+        #contents .aside1 {
+            width: 300px;
+            height: 780px;
+            background-color: #68ad6c;
+        }
+        #contents .section .content1 {
+            width: 600px;
+            height: 390px;
+            background-color: #61c964;
+        }
+        #contents .section .content2 {
+            width: 600px;
+            height: 390px;
+            background-color: #80ad83;
+        }
+        #contents .aside2 {
+            width: 300px;
+            height: 780px;
+            background-color: #73ca64;
+        }
+        footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #4e9752;
+        }
+
+
+        
+      
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav">
+            <nav class="nav1"></nav>
+            <nav class="nav2"></nav>
+            <nav class="nav3"></nav>
+        </nav>
+        <section id="contents">
+            <aside class="aside1"></aside>
+            <section class="section">
+                <section class="content1"></section>
+                <section class="content2"></section>
+            </section>
+            <aside class="aside2"></aside>
+
+        </section>
+        <footer></footer>
+
+
+    </div>
+
+</body>
+
+</html>

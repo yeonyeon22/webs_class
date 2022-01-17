@@ -5,28 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice</title>
+    <title>Layout03_1</title>
     <style>
         * {
             padding: 0;
             margin: 0;
         }
 
-        div {
+        body {
             background-color: #E1F5FE;
         }
-
         #wrap {
             width: 1200px;
             margin: 0 auto;
         }
-
         #header {
             width: 1200px;
             height: 100px;
             background-color: #B3E5FC;
         }
-
         #nav {
             width: 1200px;
             display: flex;
@@ -43,35 +40,38 @@
         }
         #contents {
             width: 1200px;
-            height: 780px;
+            height: 520px;
             display: flex;
         }
         #contents .aside {
             width: 300px;
             height: 520px;
-            background-color: #4FC3F7;        
+            background-color: #4FC3F7;
         }
-        #contents .content .article1 {
+        #contents .section {
+            width: 900px;
+            height: 520px;
+        }
+        #contents .section .content1 {
             width: 900px;
             height: 260px;
-            background-color: #29B6F6;            
+            background-color: #29B6F6;
         }
-        #contents .content .article2 {
+        #contents .section .content2 {
             width: 900px;
             height: 260px;
-            background-color: #03A9F4;            
+            background-color: #03A9F4;
         }
-        #contents .content .article3 {
-            width: 900px;
+        #section {
+            width: 1200px;
             height: 260px;
-            background-color: #039BE5;            
+            background-color: #039BE5;
         }
         #footer {
-
+            width: 1200px;
+            height: 100px;
+            background-color: #0288D1;
         }
-
-
-      
     </style>
 </head>
 
@@ -85,14 +85,13 @@
         </nav>
         <section id="contents">
             <aside class="aside"></aside>
-            <section id="content">
-                <article class="article1"></article>
-                <article class="article2"></article>
-                <article class="article3"></article>
+            <section class="section">
+                <section class="content1"></section>
+                <section class="content2"></section>
             </section>
-
         </section>
-        <footer></footer>
+        <section id="section"></section>
+        <footer id="footer"></footer>
     </div>
 
 </body>

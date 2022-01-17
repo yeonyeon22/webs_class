@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/html.png">
+    <link rel="icon" href="../assets/face/html.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="#">coding class</a></h1>
+        <strong>Yeon</strong>
+    </header>
+
+    <main id="contents">
+        <h2>HTML <em>웹표준/웹접근성/웹호환성</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="html.html">속성</a></li>
+                <li><a href="htmlRefer01.html">기초 문법</a></li>
+                <li><a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a></li>
+                <li class="active"><a href="htmlRefer03.html">시멘틱 태그</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+
+            <div class="doc">
+
+                <!-- 시멘틱(의미가 부여된) 태그 웹접근성 향상 -> 웹표준을 준수 -->
+
+                <h3>시멘틱 태그</h3>
+                <p>
+                    시맨틱(Semantic)은 "의미의, 의미론적인"이라는 뜻이다.<br>
+                    즉, HTML5에 도입된 시맨틱 태그는 개발자와 브라우저에게 의미있는 태그를 제공하게 된다.
+                    예를 들어, &lt;div&gt; 태그는 non-semantic 태그라고 할 수 있고
+                    &lt;table&gt;, &lt;article&gt; 등의 태그는 semantic 태그라고 볼 수 있다.<br>
+                    일반적으로 &lt;div&gt; 태그만 보고는 이 태그 안에 들어간 내용의 의미를 알 수가 없다.<br>
+                    반면, &lt;table&gt;, &lt;article> 등의 태그는 대략이라도 태그 안에 들어갈 내용의 의미를 유추할 수 있다.<br>
+                    &lt;table&gt; 태그 안에는 표가 들어갈 것이고, &lt;article&gt; 태그 안에는 어떤 형태의 글이든 글이 들어갈 것이라는 것 정도는 유추 할수 있다.
+                </p>
+
+                <h3>종류</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>&lt;article&gt;</th>
+                            <td>문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로 구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다. 사용 예제로 게시판과 블로그 글,
+                                매거진이나 뉴스 기사 등이 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;aside&gt;</th>
+                            <td>문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로 사이드바 혹은 콜아웃 박스로 표현합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;details&gt;</th>
+                            <td> "열림" 상태일 때만 내부 정보를 보여주는 정보 공개 위젯을 생성합니다. 요약이나 레이블은 <summary> 요소를 통해 제공할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;figcaption&gt;</th>
+                            <td>부모 <figure> 요소가 포함하는 다른 콘텐츠에 대한 설명 혹은 범례를 나타냅니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;footer&gt;</th>
+                            <td>가장 가까운 구획 콘텐츠나 구획 루트의 푸터를 나타냅니다. 푸터는 일반적으로 구획의 작성자, 저작권 정보, 관련 문서 등의 내용을 담습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;header&gt;</th>
+                            <td>소개 및 탐색에 도움을 주는 콘텐츠를 나타냅니다. 제목, 로고, 검색 폼, 작성자 이름 등의 요소도 포함할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;main&gt;</th>
+                            <td>문서 &lt;body&gt;의 주요 콘텐츠를 나타냅니다. 주요 콘텐츠 영역은 문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠로
+                                이루어집니다./td>
+                        </tr>
+                        <tr>
+                            <th>&lt;mark&gt;</th>
+                            <td>현재 맥락에 관련이 깊거나 중요해 표시 또는 하이라이트한 부분을 나타냅니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;nav&gt;</th>
+                            <td>문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;section&gt;</th>
+                            <td>주제별 그룹의 콘텐츠 섹션을 나타낼 때 사용합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;summary&gt;</th>
+                            <td> 상세 요소의 공개 상자에 대한 요약, 캡션 또는 범례를 지정한다. &lt;요약&gt; 요소를 클릭하면 부모 &lt;상세&gt; 요소의 상태가 열리거나
+                                닫힌다.</td>
+                        </tr>
+                        <tr>
+                            <th>&lt;time&gt;</th>
+                            <td>시간의 특정 지점 또는 구간을 나타냅니다. datetime 특성의 값을 지정해 보다 적절한 검색 결과나, 알림 같은 특정 기능을 구현할 때 사용할 수
+                                있습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>HTML5에 없어진 태그</h3>
+            <p>
+                &lt;align&gt;<br>
+                &lt;background-color&gt;<br>
+                &lt;basefont&gt;<br>
+                &lt;border&gt;<br>
+                &lt;big&gt;<br>
+                &lt;center&gt;<br>
+                &lt;color&gt;<br>
+                &lt;font&gt;<br>
+                &lt;frame&gt;<br>
+                &lt;frameset&gt;<br>
+                &lt;noframes&gt;<br>
+                &lt;hspace&gt;<br>
+                &lt;tt&gt;<br>
+                &lt;vspace&gt;<br>
+            </p>
+
+
+            <h3>HTML5에 의미가 변경된 태그</h3>
+            <p>
+                &lt;acronym&gt; =&gt; &lt;abbr&gt;
+                &lt;applet&gt; =&gt; &lt;embed&gt;
+                &lt;dir&gt; =&gt; &lt;ul&gt;
+                &lt;strike&gt; =&gt; &lt;del&gt; 또는 &lt;s&gt;
+            </p>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+
+</body>
+
+</html>
