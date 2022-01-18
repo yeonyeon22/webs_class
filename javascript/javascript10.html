@@ -193,9 +193,7 @@
         document.querySelector("#homework .view2").classList.toggle("selected");
     });
 }</pre></code>
-            </div>	
-
-
+            </div>
             <!-- //homework1 -->
 
             <!-- homework2 -->
@@ -252,6 +250,7 @@
             });
         });
 
+
         //20220118_과제
 
         //첫번째 이미지를 클릭하면 첫번째 이미지를 선택
@@ -263,9 +262,6 @@
         document.querySelector("#homework .btn2").addEventListener("click", function(){
             document.querySelector("#homework .view2").classList.toggle("selected");
         });
-
-
-
 
 
 
@@ -281,7 +277,7 @@
         //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다
         document.querySelector("#sample3 .btn1").addEventListener("click", function () {
             document.querySelectorAll("#sample3 .view > div").forEach(function (el) {
-                if (el.classList.contain("selected")) {
+                if (el.classList.contains("selected")) {
                     el.classList.remove("selected");
                 }
             });
