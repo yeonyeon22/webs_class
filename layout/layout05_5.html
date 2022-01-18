@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout05_5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;        
+        }
+        #wrap {
+        }
+               
+        #header {
+            height: 100px;
+            background-color: #EFEBE9;
+        }
+        #header .container {
+            width: 1200px;
+            background-color: #D7CCC8;
+        }
+        #nav {
+            height: 100px;
+            background-color: #BCAAA4;
+        }
+        #nav .container{
+            width: 1200px;
+            background-color: #A1887F;
+        }
+        #contents {
+            height: 780px;
+            background-color: #8D6E63;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgb(73, 71, 71);
+        }        
+        #contents .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #contents .container .article1 {
+            width: 800px;
+            height: 390px;
+            background-color: #6D4C41;
+        }
+        #contents .container .article2 {
+            width: 800px;
+            height: 390px;
+            background-color: #5D4037;
+        }
+        #contents .container .aside {
+            width: 400px;
+            height: 780px;
+            background-color: #795548;
+        }
+        #footer {
+            height: 100px;
+        }
+        #footer .container {
+            width: 1200px;
+            height: 100px;
+            background-color: #5D4037;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <section id="contents">
+            <div class="container">
+                <div class="article1"></div>
+                <div class="article2"></div>
+                <div class="article3"></div>
+                <div class="aside"></div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+
+</html>

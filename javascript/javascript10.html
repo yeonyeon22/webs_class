@@ -157,8 +157,21 @@
                 </div>
 
                 <div class="code">
-                    <pre class="line-numbers"><code class="language-js">{
-  
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector("#sample3 .btn0").addEventListener("click", function () {
+        document.querySelector("#sample3 .view2").classList.add("selected");
+        document.querySelector("#sample3 .view4").classList.add("selected");
+        document.querySelector("#sample3 .view6").classList.add("selected");
+    });
+
+    //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다
+    document.querySelector("#sample3 .btn1").addEventListener("click", function () {
+        document.querySelectorAll("#sample3 .view > div").forEach(function (el) {
+            if (el.classList.contains("selected")) {
+                el.classList.remove("selected");
+            }
+        });
+    });
 }</code></pre>
                 </div>
             </div>
@@ -197,7 +210,10 @@
             <!-- //homework1 -->
 
             <!-- homework2 -->
+            <div id="homework">
+                <h3>20220118_과제2:classList.add()</h3>
 
+            </div>
 
             <!-- //homework2 -->
 
@@ -248,21 +264,7 @@
             document.querySelectorAll("#sample2 .view > div").forEach(function (el) {
                 el.classList.toggle("selected");
             });
-        });
-
-
-        //20220118_과제
-
-        //첫번째 이미지를 클릭하면 첫번째 이미지를 선택
-        document.querySelector("#homework .btn1").addEventListener("click", function(){
-            document.querySelector("#homework .view1").classList.toggle("selected");
-        });
-
-        //두번째 이미지를 클릭하면 두번째 이미지를 선택
-        document.querySelector("#homework .btn2").addEventListener("click", function(){
-            document.querySelector("#homework .view2").classList.toggle("selected");
-        });
-
+        });    
 
 
         //03. sample3
@@ -283,7 +285,22 @@
             });
         });
 
+
+
+        // homework _20220118//        
+
+        //첫번째 이미지를 클릭하면 첫번째 이미지를 선택
+        document.querySelector("#homework .btn1").addEventListener("click", function(){
+            document.querySelector("#homework .view1").classList.toggle("selected");
+        });
+
+        //두번째 이미지를 클릭하면 두번째 이미지를 선택
+        document.querySelector("#homework .btn2").addEventListener("click", function(){
+            document.querySelector("#homework .view2").classList.toggle("selected");
+        });
+
         //이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 하시오!
+        
 
 
     </script>
