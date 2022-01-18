@@ -90,7 +90,7 @@
                 }
                 //02. 익명 함수
                 {
-                    const func = function func(){
+                    const func = function (){
                         document.write("함수가 실행되었습니다.");
                     }
                     func();
@@ -105,7 +105,7 @@
                 //04. 리턴값 함수
                 {
                     function func(){
-                        const str = "함수가 실행되었습니다."
+                        const str = "함수가 실행되었습니다.";
                         return str;
                     }
                     document.write(func());
@@ -118,8 +118,8 @@
                     //}
                     //func();
 
-                    func = () => {
-                        document.write("함수가 실행되었습니다5.");
+                    func = () => function{
+                        document.write("함수가 실행되었습니다.");
                     }
                     func();
                 }
@@ -132,33 +132,28 @@
                     //func();
 
                     const func = () => {
-                        document.write("함수가 실행되었습니다.6")
+                        document.write("함수가 실행되었습니다.");
                     }
                     func();
                 }
 
 
-                //07. 화살표 함수 : 리턴값 함수
+                //07. 화살표 함수 : 매개변수 함수
+                    
                 {
-                    //function func(){
-                    //    const str = "함수가 실행되었습니다.7";
-                    //    return str;
-                    //}
-                    //document.write(func());
-
-                    func = () => {
-                        const str = "함수가 실행되었습니다.7";
-                        return str;
+                    func = (str) => {
+                        document.write(str);
                     }
-                    document.write(func());
+                    func("함수가 실행되었습니다.");
                 }
 
                 //08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 함수                
                 {
-                    const func = (str) => {
+                    func = () => {
+                        const str = "함수가 실행되었습니다.";
                         return str;
                     }
-                    document.write(func("함수가 실행되었습니다.8"));
+                    document.write(func());
                 }
 
 
