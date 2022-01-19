@@ -1,6 +1,6 @@
 //결과보기 버튼을 클릭하면 경고창을 띄워주세요~
 //document.querySelector(".result").addEventListener("click", function(){
-//    alert("ddd")
+//    alert("ddd") : 시험 작동
 //});
 
 //다른 방법으로 식 표현하기//
