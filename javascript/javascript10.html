@@ -36,7 +36,15 @@
             </ul>
 
             <ul>
-                <li><a href="practice01.html">데이터 연습하기</a></li>
+                <li class="active"><a href="practice.html">데이터 연습하기</a></li>
+            </ul>
+            <ul>
+                <li class="active"><a href="sample.html">필수 예제</a></li>
+                <li><a href="plugin.html">플러그인</a></li>
+                <li><a href="effect/mouseEffect.html">마우스 이펙트</a></li>
+                <li><a href="effect/parallaxEffect.html">패랠랙스 이펙트</a></li>
+                <li><a href="effect/slideEffect.html">슬라이드 이펙트</a></li>
+                <li><a href="Effect/gameEffect.html">게임 이펙트</a></li>
             </ul>
         </nav>
     </header>
@@ -170,10 +178,12 @@
                     <a href="#c" class="btn0">리셋</a>
                     <a href="#c" class="btn1">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다</a>
                     <a href="#c" class="btn2">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 변경합니다</a>
+                    <a href="#c" class="btn3">이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 됩니다</a>
                 </div>
 
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    //리셋
     document.querySelector("#sample3 .btn0").addEventListener("click", function () {
         document.querySelector("#sample3 .view2").classList.add("selected");
         document.querySelector("#sample3 .view4").classList.add("selected");
@@ -188,13 +198,22 @@
             }
         });
     });
+
+    //이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 됩니다
+    document.querySelector("#sample3 .btn3").addEventListener("click", function(){
+        document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+            if(el.classList.contains("selected")){
+                el.classList.add("blue");
+            }
+        });
+    });
 }</code></pre>
                 </div>
             </div>
             <!-- //sample3 -->
 
             <!-- homework1 -->
-            <div id="homework1" class="sample">
+            <div id="sample4" class="sample">
                 <h3>20220118_과제 : .classList.toggle()</h3>
                 <div class="view">
                     <div class="view1"><img src="assets/img/image08.jpg" alt="이미지01"></div>
@@ -226,7 +245,7 @@
             <!-- //homework1 -->
 
             <!-- homework2 -->
-            <div id="homework2" class="sample">
+            <div id="sample5" class="sample">
                 <h3>20220118_과제2:classList.add()</h3>
                 <div class="view">
                     <div class="view1"><img src="assets/img/image08.jpg" alt="이미지01"></div>
@@ -331,7 +350,7 @@
             });
         });
         //이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 하시오!
-        document.querySelector("#sample3 .btn2").addEventListener("click", function(){
+        document.querySelector("#sample3 .btn3").addEventListener("click", function(){
             document.querySelectorAll("#sample3 .view > div").forEach(function(el){
                 if(el.classList.contains("selected")){
                     el.classList.add("blue");
@@ -344,13 +363,13 @@
         // homework _20220118//        
 
         //첫번째 이미지를 클릭하면 첫번째 이미지를 선택
-        document.querySelector("#homework1 .btn1").addEventListener("click", function(){
-            document.querySelector("#homework1 .view1").classList.toggle("selected");
+        document.querySelector("#sample4 .btn1").addEventListener("click", function(){
+            document.querySelector("#sample4 .view1").classList.toggle("selected");
         });
 
         //두번째 이미지를 클릭하면 두번째 이미지를 선택
-        document.querySelector("#homework1 .btn2").addEventListener("click", function(){
-            document.querySelector("#homework1 .view2").classList.toggle("selected");
+        document.querySelector("#sample4 .btn2").addEventListener("click", function(){
+            document.querySelector("#sample4 .view2").classList.toggle("selected");
         });
         
         
