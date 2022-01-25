@@ -64,7 +64,6 @@
                     <li><a href="#">폼 선택자</a></li>
                 </ul>
             </div>
-
         </div>
 
         <div class="table-wrap">
@@ -109,7 +108,6 @@
                             <td>* {color: #fff}</td>
                             <td>전체 태그를 선택하여 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
@@ -131,33 +129,31 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>하위 선택자<br>(Descendant Selector)</th>
+                            <th>하위 선택자(자손결합자)<br>(Descendant Selector)</th>
                             <td>div p {color: #fff}</td>
-                            <td>div 태그의 모든 자식 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>div 태그 안에 위치하는 모든 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>자식 선택자<br>(Child Selector)</th>
                             <td>div &gt; p {color: #fff}</td>
-                            <td>div 자식 중 첫번째 p 태그 자식만을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>div 자식 중 p 태그만을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>형제 선택자<br>(Sibling Selector)</th>
                             <td>div ~ p {color: #fff}</td>
-                            <td> 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>duv 요소를 뒤따르는 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>인접 형제 선택자<br>(Adjacent Sibling Selector)</th>
-                            <td>div, p {color: #fff}</td>
+                            <td>div + p {color: #fff}</td>
                             <td>div 태그와 p 태그를 선택하여 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
 
-
             <table>
-                <h3>?</h3>
+                <h3>속성 선택자</h3>
                 <colgroup>
                     <col style="width: 20%">
                     <col style="width: 20%">
@@ -209,7 +205,7 @@
                 </tbody>
             </table>
 
-            <h3>가상 선택자</h3>
+            <h3>가상 요소</h3>
             <div class="table">
                 <table>
                     <colgroup>
@@ -232,7 +228,7 @@
                         </tr>
                         <tr>
                             <th>::first-letter</th>
-                            <td>p::first-letter {content:'시작'}</td>
+                            <td>p::first-letter {color: #fff;}</td>
                             <td>p 요소의 첫번째 글자를 선택하여 글씨색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
@@ -249,7 +245,7 @@
                             <th>::selection</th>
                             <td>p:selection {color: red}</td>
                             <td>div 태그와 p 태그를 선택하여 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
-                        </tr>                       
+                        </tr>
 
                     </tbody>
                 </table>
@@ -274,46 +270,68 @@
                         <tr>
                             <th>:first-child</th>
                             <td>li:first-line {color: #fff;}</td>
-                            <td>p 요소의 첫번째 줄의 글씨색을 하얀색으로 변경합니다.</td>
+                            <td>li 태그의 첫번째 줄의 글씨색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>:last-child</th>
                             <td>li:last-child {color: #fff;}</td>
-                            <td></td>
+                            <td>li 태그의 마지막 줄의 글씨색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th>:first-of-type()</th>
-                            <td>p:first-of-type(3) {color: #fff;}</td>
-                            <td>id 아이디를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <th>:first-of-type</th>
+                            <td>p:first-of-type {color: #fff;}</td>
+                            <td>p 태그 중 제일 첫 줄을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>:last-of-type</th>
+                            <td>p:last-of-type {color: #fff;}</td>
+                            <td>p 태그 중 제일 마지막 줄을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>:nth-child() </th>
+                            <td>p:nth-child(2) {color: #fff;}</td>
+                            <td>p 타입 중 2번째 줄을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>:nth-last-child() </th>
+                            <td>p:nth-last-child(2) {color: #fff;}</td>
+                            <td>p 타입 중 마지막 순서부터 2번째 줄을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>:nth-of-type()</th>
+                            <td>p:nth-of-type(3) {color: #fff;}</td>
+                            <td>p 태그 요소 중 3번째 p태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>:nth-last-of-type()</th>
-                            <td>p:nth-last-of-type() {color: #fff;}</td>
-                            <td>id 아이디를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>p:nth-last-of-type(3) {color: #fff;}</td>
+                            <td>p 태그 요소 중 마지막 순서부터 3번째 p태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>:only-child</th>
+                            <td>p:only-child {color: #fff;}</td>
+                            <td>p태그에 자식요소가 하나밖에 없을 때 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>:only-of-type()</th>
-                            <td>p:only-of-type() {color: #fff;}</td>
-                            <td>div 태그와 p 태그를 선택하여 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
-                        </tr>  
+                            <td>p:only-of-type {color: #fff;}</td>
+                            <td>p 태그의 형제가 없고 단독으로 쓰일 때 글씨 색을 하얀색으로 변경합니다.</td>
+                        </tr>
                         <tr>
                             <th>:not()</th>
                             <td>li:not(:nth-child(2)) {color: #fff;}</td>
-                            <td>div 태그와 p 태그를 선택하여 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
-                        </tr>   
+                            <td>li 태그 요소 중 두번째 줄을 제외하고서 글씨 색을 하얀색으로 변경합니다.</td>
+                        </tr>
                         <tr>
                             <th>:root</th>
                             <td>:root {color: #fff;}</td>
-                            <td>div 태그와 p 태그를 선택하여 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
-                        </tr>      
+                            <td>문서의 root 요소를 선택하여 하얀색으로 변경합니다.</td>
+                        </tr>
                         <tr>
                             <th>:empty</th>
                             <td>:empty {color: #fff;}</td>
-                            <td>div 태그와 p 태그를 선택하여 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
-                        </tr>   
-                        
-                        
-
+                            <td>자식요소가 존재하지 않는 경우에 하얀색으로 변경합니다.</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -337,30 +355,30 @@
                         <tr>
                             <th>:link</th>
                             <td>a:link {color: #fff}</td>
-                            <td>div 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>아직 링크를 방문해본 적 없을 때 링크 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>:visited</th>
-                            <td>a:visitec {color: #fff}</td>
-                            <td>class 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>a:visited {color: #fff}</td>
+                            <td>방문한 적 있는 링크 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>:hover</th>
                             <td>a:hover {color: #fff}</td>
-                            <td>id 아이디를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>커서가 올라가 있을 때 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>:active</th>
                             <td>a:active {color: #fff}</td>
-                            <td>div 태그와 p 태그를 선택하여 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>마우스 버튼을 누르는 순간부터 떼는 시점까지 (활성화) 요소를 선택하여 색을 하얀색으로 변경합니다.</td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
 
             <div class="table">
-                <h3>링크 가상 선택자</h3>
+                <h3>폼 선택자</h3>
                 <table>
                     <colgroup>
                         <col style="width: 20%;">
@@ -375,34 +393,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                         <tr>
                             <th>:checked</th>
                             <td>input:checked {color: #fff}</td>
-                            <td></td>
+                            <td>체크한 상태의 라디오, 체크박스, 옵션 등의 색을 하얀색으로 변경합니다. </td>
                         </tr>
                         <tr>
                             <th>:focus</th>
                             <td>input:focus {color: #fff}</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>:checked</th>
-                            <td>input:checked {color: #fff}</td>
-                            <td></td>
+                            <td>양식의 입력 칸 등을 클릭 또는 탭하여 선택했을 때 요소를 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>:enable</th>
                             <td>input:enable {color: #fff}</td>
-                            <td></td>
+                            <td>활성(선택, 클릭, 입력 등)하거나 포커스를 받을 수 있는 모든 요소를 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <th>:disable</th>
                             <td>input:disable {color: #fff}</td>
-                            <td></td>
+                            <td>비활성(선택, 클릭, 입력 등)하거나 포커스를 받을 수 없는 모든 요소를 하얀색으로 변경합니다.</td>
                         </tr>
-                        
-                        
                     </tbody>
                 </table>
             </div>
@@ -411,7 +422,7 @@
 
         </div>
 
-        
+
 
         </div>
 
@@ -431,7 +442,8 @@
         // });
         document.querySelectorAll(".subTitle ul li").forEach((el) => {
             el.addEventListener("click", (e) => {
-                e.preventDefault
+                e.preventDefault();
+                el.classList.toggle("active");
             });
         });
     </script>
