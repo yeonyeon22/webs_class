@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">coding class</a></h1>
@@ -36,62 +38,24 @@
 
         <div class="refer">
             <div class="doc">
-                <h3>CSS란?</h3>
-                <p>CSS 변하는 데이터(값)을 저장할 수 있는 메모리 공간 변수에는 데이터가 오직 한 개만 저장된다. 새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 된다. 변수에 저장할 수 있는 데이터의 종류로는 문자형(Srting), 숫자형(Number), 논리형(Boolean), 그리고 빈(Null) 데이터가 있다.</p>
-                
-                <h3>CSS 주석 표시</h3>
-                <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                <h3>벤더 프리픽스(vendor prefix)</h3>
+                <p>주요 웹 브라우저 공급자가 새로운 실험적인 기능을 제공할 때 이전 버전의 웹 브라우저에 그 사실을 알려주기 위해 사용하는 접두사(prefix)를 의미합니다.</p>
+                <p>아직 CSS 권고안에 포함되지 못한 기능이나, CSS 권고안에는 포함되어 있지만 아직 완벽하게 제정된 상태가 아닌 기능을 사용하고자 할 때 벤더 프리픽스를 사용하게 됩니다. <br>
+                    그렇게 하면 해당 기능이 포함되어 있지 않은 이전 버전의 웹 브라우저에서도 그 기능을 사용할 수 있게 됩니다.</p>
 
-    /* CSS 주석 */
-    
-}</pre></code>
-                </div>
-
-                <h3>CSS 선언 방법</h3>
-                <h4>내부 스타일 시트(Internal Style Sheet)</h4>
-                <p>HTML문서내에서 &lt;head&gt;와 &lt;/head&gt;사이에 스타일을 정의하는 방법입니다.</p>
-                <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    &lt;head&gt;
-        &lt;style type="text/css"&gt;
-            body {font-size: 9px;}
-        &lt;/style&gt;
-    &lt;/head&gt;
-}</code></pre>
-                </div>
-
-                <h4>외부 스타일 시트(External Style Sheet)</h4>
-                <p>css라는 확장자를 가진 스타일 시트 파일을 만들고 이 파일을 HTML 문서에 연결하여 사용하는 방법입니다.</p>
-                <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    &lt;head>&gt;
-        &lt;link rel="stylesheet" type="text/css" href="mystyle.css">&gt;
-    &lt;/head>&gt;
-}</code></pre>
-                </div>
-
-                <h4>HTML태그내에 스타일 지정(Inline Styles)</h4>
-                <p>위의 방법들에 비해서 적용범위가 더욱 좁아진 형태입니다. 스타일을 적용하고 싶은 HTML태그안에서 정의하는 방법입니다.</p>
-                <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    &lt;p style="color:gray;"&gt;이 문단의 색상은 회색으로 지정됩니다.&lt;/p&gt;
-}</code></pre>
-                </div>
+                <h3>주요 웹 브라우저의 벤더 프리픽스(vendor prefix)</h3>
+                <ul>
+                    <li>익스플로러 : -ms-</li>
+                    <li>크롬 & 사파리 : -webkit-</li>
+                    <li>파이어폭스 : -moz-</li>
+                    <li>오페라 : -o-</li>
+                </ul>
             </div>
         </div>
-        <!-- //refer -->
+        
     </main>
     <!-- script -->
     <script src="assets/js/prism.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
