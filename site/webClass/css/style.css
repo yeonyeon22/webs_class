@@ -238,12 +238,12 @@ float으로 인한 영역 깨짐 현상 발생 (하이트 값을 인식 못함)
     background-image: url(../img/img_text_bg2.jpg);
 } */
 @media (-webkit-min-device-pixel-ratio: 1.5){
-    itType01 .img1 {
+    .itType01 .img1 {
         background-image: url(../img/img_test@2x.jpg);
     }
 }
 @media (-webkit-min-device-pixel-ratio: 2.5){
-    itType01 .img1 {
+    .itType01 .img1 {
         background-image: url(../img/img_test@3x.jpg);
     }
 }
