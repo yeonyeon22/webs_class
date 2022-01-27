@@ -222,7 +222,24 @@ float으로 인한 영역 깨짐 현상 발생 (하이트 값을 인식 못함)
     width: 386.66px;
     height: 530px;
     margin-right: 20px;
-    background-color: #ccc;
+}
+.itType01 .text .text_title {
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 70px;
+    margin-bottom: 45px;
+}
+.itType01 .text .text_desc {
+    font-family: 'NEXONLv1Gothic';
+    font-size: 18px;
+    line-height: 1.53;
+    color: #888;
+    margin-bottom: 55px;
+}
+.itType01 .text .text_more {
+    font-family: 'NEXONLv1Gothic';
+    font-size: 18px;
+    color: #af3029;
 }
 .itType01 .img1 {
     float: left;
@@ -230,20 +247,27 @@ float으로 인한 영역 깨짐 현상 발생 (하이트 값을 인식 못함)
     height: 530px;
     margin-right: 20px;
     background-image: url(../img/img_text_bg1.jpg);
+    background-size: 100%;
 }
-/* .itType01 .img2 {
+.itType01 .img2 {
     float: left;
     width: 386.66px;
     height: 530px;
     background-image: url(../img/img_text_bg2.jpg);
-} */
+}
 @media (-webkit-min-device-pixel-ratio: 1.5){
     .itType01 .img1 {
-        background-image: url(../img/img_test@2x.jpg);
+        background-image: url(../img/img_text_bg1@2x.jpg);
+    }
+    .itType01 .img2 {
+        background-image: url(../img/img_text_bg2@2x.jpg);
     }
 }
 @media (-webkit-min-device-pixel-ratio: 2.5){
     .itType01 .img1 {
-        background-image: url(../img/img_test@3x.jpg);
+        background-image: url(../img/img_text@3x.jpg);
+    }
+    .itType01 .img2 {
+        background-image: url(../img/img_text@2x.jpg);
     }
 }
