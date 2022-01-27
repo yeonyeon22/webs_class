@@ -224,14 +224,15 @@ float으로 인한 영역 깨짐 현상 발생 (하이트 값을 인식 못함)
     margin-right: 20px;
 }
 .itType01 .text .text_title {
+    font-family: 'GmarketSans';
     font-size: 50px;
-    font-weight: 500;
-    margin-top: 70px;
-    margin-bottom: 45px;
+    font-weight: 500;    
+    margin: 70px 0 45px -4px
 }
 .itType01 .text .text_desc {
     font-family: 'NEXONLv1Gothic';
     font-size: 18px;
+    font-weight: 300;
     line-height: 1.53;
     color: #888;
     margin-bottom: 55px;
@@ -239,7 +240,12 @@ float으로 인한 영역 깨짐 현상 발생 (하이트 값을 인식 못함)
 .itType01 .text .text_more {
     font-family: 'NEXONLv1Gothic';
     font-size: 18px;
+}
+.itType01 .text .text_more a {
     color: #af3029;
+}
+.itType01 .text .text_more svg {
+    vertical-align: 2px;
 }
 .itType01 .img1 {
     float: left;
@@ -271,3 +277,90 @@ float으로 인한 영역 깨짐 현상 발생 (하이트 값을 인식 못함)
         background-image: url(../img/img_text@2x.jpg);
     }
 }
+
+/* itType02 */
+.itType02 {
+    background: #f5f5f5;
+    overflow: hidden;
+    padding: 150px 0;
+    min-width: 1200px;
+}
+.itType02_left {
+    float: left;
+    /* width: calc(50%-25px); */
+    width: 48.5%;
+    height: 600px;
+    background: url(../img/img_text_bg3.jpg) no-repeat center center;
+    background-size: cover;
+    margin-right: 1.5%;
+    /* margin-right: 25px; */
+    /* margin: 50px; right 영역이 밀림*/
+}
+.itType02_right {
+    float: left;
+    width: 48.5%;
+    height: 600px;
+    margin-left: 1.5%;
+}
+.itType02_right .sub {
+    font-family: 'NEXON Lv1 Gothic';
+    font-size: 16px;
+    font-weight: 300;
+    color: #7c7c7c;
+    margin-top: 17px;
+    margin-bottom: 10px;
+    display: inline-block;
+    /* text-decoration: underline;
+    text-underline-position: under; */
+    border-bottom: 1px solid #ccc;
+}
+.itType02_right .title {
+    font-family: 'Gmarket Sans TTF';
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 38px;
+    white-space: nowrap;
+}
+.itType02_right .desc {
+    font-family: 'Gmarket Sans TTF';
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 38px;
+    white-space: nowrap;
+}
+.itType02_right .view {
+    font-family: 'Gmarket Sans TTF';
+    font-size: 24px;
+    font-weight: 500;
+    background: #000;
+    padding: 5px 46px;
+    display: inline-block;
+    color: #fff;
+}
+/* 
+self _ 
+
+.itType02 .left {
+    float: left;  
+    width: 50%;
+
+}  
+.itType02 .left .img {
+    background-image: url(../img/img_text_bg3.jpg);
+    width: 431px;
+    height: 298px;
+}
+.itType02 .right {
+    float: left;
+    width: 50%;
+}
+.itType02 .right .text h5 .text_title {
+    font-family: 'NEXON Lv1 Gothic';
+    font-size: 12px;
+}
+
+.itType02 .right .text h2 .text_title {
+    font-family: 'Gmarket Sans TTF';
+    font-size: 40px;
+} */
