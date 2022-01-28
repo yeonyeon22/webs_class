@@ -16,13 +16,13 @@
         }
         #header {
             height: 109px;
-            background-color: rgb(236, 197, 228);
+            background-color: rgb(197, 227, 236);
         }
         #header .header-container {
             width: 1200px;
             height: 109px;
             margin: 0 auto;
-            background-color: rgb(199, 119, 182);
+            background-color: rgb(152, 200, 214);
         }
         /* #header .header-container #logo {}
 
@@ -52,38 +52,133 @@
             height: 893px;
             margin: 0 auto;
             background-color: rgb(104, 153, 185);
-        }       
+        }
         #contents {}
+
         #contents #cont1 {
             height: 640px;
             background-color: rgb(194, 240, 224);
         }
-        #contents #cont1 .contents-cont1 {
+        #contents #cont1 .cont1-container {
             width: 1200px;
             height: 640px;
             margin: 0 auto;
-            background-color: rgb(226, 161, 161);
+            background-color: rgb(232, 240, 164);
         }
         #contents #cont2 {
             height: 3250px;
             background-color: rgb(140, 216, 191);
         }
-        #contents #cont2 .contents-cont2 {
+        #contents #cont2 .cont2-container {
             width: 1200px;
             height: 3250px;
             margin: 0 auto;
-            background-color: rgb(219, 138, 138);
+            background-color: rgb(209, 219, 115);
         }
         #contents #cont3 {
             height: 1076px;
             background-color: rgb(119, 189, 167);
         }
-        #contents #cont3 .contents-cont3 {
+        #contents #cont3 .cont3-container {
             width: 1200px;
             height: 1076px;
             margin: 0 auto;
-            background-color: rgb(201, 111, 111);
+            background-color: rgb(188, 197, 103);
         }
+        #contents #cont3 .cont3-container h3 {
+            font-family: 'NEXON Lv1 Gothic';
+            font-size: 50px;
+            font-weight: 400;
+            padding: 99px 0 40px 30px;
+        }
+        #contents #cont3 .cont3-container #img_container {
+            display: flex;
+            padding: 40px 0 40px 0;
+        }
+        #contents #cont3 .cont3-container #img_container #img_left {
+            float: left;
+            width: calc(33.33%-25px);
+            margin-right: 30px;
+            margin-left: 20px;
+        }
+        #contents #cont3 .cont3-container #img_container #img_left #luca {
+            font-family: 'NEXON Lv1 Gothic';
+            font-size: 30px;
+            font-weight: 300;
+            margin-top: 50px;
+        }
+
+        #contents #cont3 .cont3-container #img_container #img_center {
+            float: left;
+            width: calc(33.33%-25px);
+            margin-right: 30px;
+        }
+        #contents #cont3 .cont3-container #img_container #img_center #armie {
+            font-family: 'NEXON Lv1 Gothic';
+            font-size: 30px;
+            font-weight: 300;
+            margin-top: 50px;
+
+
+        }
+
+        #contents #cont3 .cont3-container #img_container #img_right {
+            float: left;
+            width: calc(33.33%-25px);
+            margin-right: 25px;
+        }
+        #contents #cont3 .cont3-container #img_container #img_right #timothee {
+            font-family: 'NEXON Lv1 Gothic';
+            font-size: 30px;
+            font-weight: 300;
+            margin-top: 50px;
+
+
+        }
+        
+
+        /* #contents #cont3 .cont3-container #text_container {
+            display: flex;
+            padding: 40px 0 40px 0;
+            background-color: rgb(124, 96, 96);
+        }
+        #contents #cont3 .cont3-container #text_container #text_left {
+            width: calc(33.33%-25px);
+            margin-right: 50px;
+            margin-left: 50px;
+            background-color: rgb(124, 96, 96);
+
+        }
+        #contents #cont3 .cont3-container #text_container #text_left #luca {
+            font-family: 'NEXON Lv1 Gothic';
+            font-size: 30px;
+            font-weight: 300;
+        }
+        #contents #cont3 .cont3-container #text_container #text_center {
+            width: calc(33.33%-25px);
+            margin-right: 50px;
+            margin-left: 50px;
+            background-color: rgb(124, 96, 96);
+        }
+        #contents #cont3 .cont3-container #text_container #text_center #armie {
+            font-family: 'NEXON Lv1 Gothic';
+            font-size: 30px;
+            font-weight: 300;
+        }
+        #contents #cont3 .cont3-container #text_container #text_right {
+            width: calc(33.33%-25px);
+            margin-right: 30px;
+            margin-left: 20px;
+            background-color: rgb(124, 96, 96);
+        }
+        #contents #cont3 .cont3-container #text_container #text_right #timothee {
+            float: left;
+            width: calc(33.33%-25px);
+            margin-right: 25px;
+            font-family: 'NEXON Lv1 Gothic';
+            font-size: 30px;
+            font-weight: 300;
+        } */
         #footer {
             height: 399px;
             background-color: rgb(127, 165, 190);
@@ -100,9 +195,43 @@
             <div class="banner-container"></div>
         </article>
         <section id="contents">
-            <div id="cont1" class="contents-cont1"></div>
-            <div id="cont2" class="contents-cont2"></div>
-            <div id="cont3" class="contents-cont3"></div>
+            <div id="cont1">
+                <div class="cont1-container"></div>
+            </div>
+            <div id="cont2">
+                <div class="cont2-container"></div>
+            </div>
+            <div id="cont3">
+                <div class="cont3-container">
+                    <h3>Call Me by Your Name</h3>
+                    <div id="img_container">
+                        <div id="img_left">
+                            <img src="img/0128_1.jpg" alt="left">
+                            <h4 id="luca">Luca Guadagnino</h4>
+                        </div>
+                        <div id="img_center">
+                            <img src="img/0128_2.jpg" alt="center">
+                            <h4 id="armie">Armie Hammer</h4>
+
+                        </div>
+                        <div id="img_right">
+                            <img src="img/0128_3.jpg" alt="right">
+                            <h4 id="timothee">Timothee Chalamet</h4>
+                        </div>
+                    </div>
+                    <!-- <div id="text_container">
+                        <div id="text_left">
+                            <h4 id="luca">Luca Guadagnino</h4>
+                        </div>
+                        <div id="text_center">
+                            <h4 id="armie">Armie Hammer</h4>
+                        </div>
+                        <div id="text_right">
+                            <h4 id="timothee">Timothee Chalamet</h4>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
         </section>
         <footer id="footer"></footer>
     </div>
