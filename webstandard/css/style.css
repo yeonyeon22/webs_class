@@ -27,11 +27,12 @@
 .header .header-menu a {color: #fff; padding: 10px 0px 10px 13px; display: inline-block;}
 .header .header-menu a:hover {color: #666;}
 .header .header-tit {text-align: center;}
-.header .header-tit h1 {background-color: #4aa8d4; font-size: 28px;
-padding: 5px 20px 6px 10px; display: inline-block; color: #fff; margin-top: 40px; 
-font-weight: normal; text-transform: uppercase;}
-.header .header-tit a {display: inline-block; background-color: #2698cb; font-size: 18px; color: #fff;
-padding: 5px 20px 6px 20px; margin-top: -20px;}
+.header .header-tit h1 {background-color: rgba(168, 210, 238, 0.3); font-size: 28px;
+padding: 5px 10px 6px 10px; display: inline-block; color: #fff; margin-top: 40px; 
+font-family: 'Stylish'; font-weight: normal; text-transform: uppercase;}
+.header .header-tit a {display: inline-block; background-color: rgba(168, 210, 238, 0.3); 
+font-family: 'Stylish'; font-size: 18px; color: #fff;
+padding: 5px 10px 6px 10px; margin-top: -20px;}
 .header .header-icon {text-align: center; margin: 30px;}
 .header .header-icon a {width: 60px; height: 60px; display: inline-block; background: url(../img/icon.png); margin: 0 3px;}
 .header .header-icon a.icon1 {background-position: 0 0;}
@@ -64,7 +65,7 @@ padding: 5px 20px 6px 20px; margin-top: -20px;}
 
 /* 타이틀 */
 .tit {position: relative;}
-.tit h2 {font-size: 40px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #2c94c4; font-family: 'Stylish';}
+.tit h2 {font-size: 33px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #83b6ce; font-family: 'Stylish';}
 .tit .btn {position: absolute; top: 5px; right: 0; width: 60px; height: 60px; 
     background: url(../img/icon.png) no-repeat 0 -600px;} 
 
