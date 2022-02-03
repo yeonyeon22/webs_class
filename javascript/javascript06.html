@@ -351,6 +351,12 @@
                                 <td class="sample05_M5"></td>
                                 <td class="sample05_R5"></td>
                             </tr>
+                            <tr>
+                                <td class="sample05_N6"></td>
+                                <td class="sample05_Q6"></td>
+                                <td class="sample05_M6"></td>
+                                <td class="sample05_R6"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -539,11 +545,6 @@
             document.querySelector(".sample02_Q4").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample02_M4").innerHTML = "join(' ')";
             document.querySelector(".sample02_R4").innerHTML = text4;
-
-            document.querySelector(".sample02_N5").innerHTML = 5;
-            document.querySelector(".sample02_Q5").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample02_M5").innerHTML = "join('+')";
-            document.querySelector(".sample02_R5").innerHTML = text5;
         }
         
         //03. 배열 메서드 : push() : 배열 마지막 요소에 추가 : 반환(숫자)
@@ -578,7 +579,6 @@
             document.querySelector(".sample05_N1").innerHTML = 1;
             document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample05_M1").innerHTML = "unshift(600)";
-            document.querySelector(".sample05_P1").innerHTML = arrUnshift;
             document.querySelector(".sample05_R1").innerHTML = arrNum;
         }
 
@@ -586,12 +586,11 @@
         //06. 배열 메서드 : shift() : 배열 처음 요소에 삭제 : 반환(삭제된 요소)
         {
             const arrNum = [100, 200, 300, 400, 500];
-            const arrNumShift = arrNum.Shift();
+            const arrNumShift = arrNum.shift();
 
             document.querySelector(".sample06_N1").innerHTML = 1;
             document.querySelector(".sample06_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample06_M1").innerHTML = "shift(600)";
-            document.querySelector(".sample06_P1").innerHTML = arrShift;
             document.querySelector(".sample06_R1").innerHTML = arrNum;
         }
 
@@ -625,7 +624,7 @@
             document.querySelector(".sample05_M3").innerHTML = "sort(function(a,b){return b-a})";
             document.querySelector(".sample05_R3").innerHTML = arrNumSort3;
 
-            const arrNum3 = [500, 400, 300, 200, 100];
+            const arrNum4 = [500, 400, 300, 200, 100];
             const arrNumSort4 = arrNum4.sort(function (a, b) {return a - b});
 
             document.querySelector(".sample05_N4").innerHTML = 4;
@@ -634,7 +633,7 @@
             document.querySelector(".sample05_R4").innerHTML = arrNumSort4;
 
             const arrNum5 = ['c', 'd', 'e', 'a', 'b'];
-            const arrNumSort5 = arrNum5.sort(a, b => a.localeCompare(b));
+            const arrNumSort5 = arrNum5.sort((a, b) => a.localeCompare(b));
 
             document.querySelector(".sample05_N5").innerHTML = 5;
             document.querySelector(".sample05_Q5").innerHTML = "['c', 'd', 'e', 'a', 'b']";
@@ -642,7 +641,7 @@
             document.querySelector(".sample05_R5").innerHTML = arrNumSort5;
 
             const arrNum6 = ['c', 'd', 'e', 'a', 'b'];
-            const arrNumSort6 = arrNum6.sort(a, b => a.localeCompare(a));
+            const arrNumSort6 = arrNum6.sort((a, b) => b.localeCompare(a));
 
             document.querySelector(".sample05_N6").innerHTML = 6;
             document.querySelector(".sample05_Q6").innerHTML = "['c', 'd', 'e', 'a', 'b']";
