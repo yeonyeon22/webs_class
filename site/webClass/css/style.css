@@ -396,7 +396,6 @@ self _
     float: left;
     background: url(../img/left.jpg);
     position: relative;
-
 }
 .img_type01 .img-wrap .right {
     width: 590px;
@@ -405,7 +404,6 @@ self _
     float: right;
     background: url(../img/right.jpg);
     position: relative;
-
 }
 .img_type01 .img-wrap .left-cont {
     position: absolute;
