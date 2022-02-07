@@ -77,6 +77,9 @@
             font-size: 60px;
             margin-bottom: 2vw;
         }
+        .board .search {
+            margin-bottom: 3vw;
+        }
         .board .search label {
             display: none;
         }
@@ -86,6 +89,21 @@
             padding: 10px 40px;
             border-radius: 40px;
             width: 50%;
+        }
+        .board .list {
+            text-align: left;
+        }
+        .board .list li {
+            background-color: #bdd6e6;
+            margin: 5px;
+            padding: 7px 10px;
+            border-radius: 4px;
+            list-style: none;
+            transition: all 0.3s;
+        }
+        .board .list li:hover {
+            background-color: #a5c3d5;
+            cursor: grabbing;
         }
     </style>
 </head>
@@ -105,6 +123,29 @@
             <div class="search">
                 <label for="search-box">검색하기</label>
                 <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!!">
+            </div>
+
+            <div class="list">
+                <ul>
+                    <li><strong>all</strong> : all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.</li>
+                    <li><strong>animation</strong> : animation 속성은 애니메이션 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.</li>
+                    <li><strong>animation-delay</strong> : animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다.</li>
+                    <li><strong>animation-direction</strong> : animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다.</li>
+                    <li><strong>animation-duration</strong> : animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다.</li>
+                    <li><strong>animation-fill-mode</strong> : animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                    <li><strong>animation-interation-count</strong> : animation-interation-count 속성은 애니메이션 반복 횟수를 설정합니다.</li>
+                    <li><strong>animation-name</strong> : animation-name 속성은 애니메이션 키프레임 이름을 설정합니다.</li>
+                    <li><strong>animation-play-state</strong> : animation-play-state 속성은 애니메이션 진행상태를 설정합니다.</li>
+
+                    <li><strong>backdrop-filter</strong> : backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다.</li>
+                    <li><strong>backdrop-visibility</strong> : backdrop-visibility 속성은 요소 뒷면을 나타낼지 여부를 설정합니다.</li>
+                    
+                    <li><strong>caption-side</strong> : caption-side 속성은 테이블 캡션 위치를 설정합니다.</li>
+
+
+                    <li></li>
+                </ul>
+
             </div>
         </div>
     </div>
