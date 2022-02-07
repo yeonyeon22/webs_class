@@ -302,8 +302,8 @@ img {
     transition: all 0.2s;
     cursor: help;
 } */
-.script .sample .table .td[class*="_R"]:hover ,
-.script .sample .table .td[class*="_P"]:hover {
+.script .sample .table td[class*="_R"]:hover ,
+.script .sample .table td[class*="_P"]:hover {
     color: #000;
 }
 .script .sample .btn {

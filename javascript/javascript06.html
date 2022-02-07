@@ -783,32 +783,32 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="sample11_Q1"></td>
                                 <td class="sample11_N1"></td>
+                                <td class="sample11_Q1"></td>
                                 <td class="sample11_M1"></td>
                                 <td class="sample11_R1"></td>
                             </tr>
                             <tr>
-                                <td class="sample11_Q2"></td>
                                 <td class="sample11_N2"></td>
+                                <td class="sample11_Q2"></td>
                                 <td class="sample11_M2"></td>
                                 <td class="sample11_R2"></td>
                             </tr>
                             <tr>
-                                <td class="sample11_Q3"></td>
                                 <td class="sample11_N3"></td>
+                                <td class="sample11_Q3"></td>
                                 <td class="sample11_M3"></td>
                                 <td class="sample11_R3"></td>
                             </tr>
                             <tr>
-                                <td class="sample11_Q4"></td>
                                 <td class="sample11_N4"></td>
+                                <td class="sample11_Q4"></td>
                                 <td class="sample11_M4"></td>
                                 <td class="sample11_R4"></td>
                             </tr>
                             <tr>
-                                <td class="sample11_Q5"></td>
                                 <td class="sample11_N5"></td>
+                                <td class="sample11_Q5"></td>
                                 <td class="sample11_M5"></td>
                                 <td class="sample11_R5"></td>
                             </tr>
@@ -973,6 +973,10 @@
             const arrNum = [100, 200, 300, 400, 500];
             const arrNumLength = arrNum.length;
 
+            // document.querySelector(".sample02_N1").innerHTML = 1;
+            // document.querySelector(".sample02_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            // document.querySelector(".sample02_M1").innerHTML = "join('*')";
+            // document.querySelector(".sample02_R1").innerHTML = text1;
             document.querySelector(".sample01_R1").innerHTML = arrNumLength;
 
 
@@ -1376,7 +1380,7 @@
                 document.querySelector(".sample11_Q1").innerHTML = "[100, 200, 300, 400, 500]";
                 document.querySelector(".sample11_M1").innerHTML = "find(el => el === 300)";
                 document.querySelector(".sample11_R1").innerHTML = result;
-                consol.log(result);
+                console.log(result);
 
                 const result2 = arrNum.find(el => el === 600)
 
@@ -1393,16 +1397,16 @@
                 document.querySelector(".sample11_M3").innerHTML = "find(el => el === 'javascript')";
                 document.querySelector(".sample11_R3").innerHTML = result3;
 
-                const arrText = ["javascript", "react", "vue"];
-                const result4 = arrText.findIndex(el => el === "javascript")
+                const arrText4 = ["javascript", "react", "vue"];
+                const result4 = arrText4.findIndex(el => el === "javascript")
 
                 document.querySelector(".sample11_N4").innerHTML = 4;
                 document.querySelector(".sample11_Q4").innerHTML = "['javascript', 'react', 'vue']";
                 document.querySelector(".sample11_M4").innerHTML = "find(el => el === 'javascript')";
                 document.querySelector(".sample11_R4").innerHTML = result4;
 
-                const arrText = ["javascript", "react", "vue"];
-                const result5 = arrText.findIndex(el => el === "html")
+                const arrText5 = ["javascript", "react", "vue"];
+                const result5 = arrText5.findIndex(el => el === "html")
 
                 document.querySelector(".sample11_N5").innerHTML = 5;
                 document.querySelector(".sample11_Q5").innerHTML = "['javascript', 'react', 'vue']";
@@ -1446,8 +1450,8 @@
                 document.querySelector(".sample12_N1").innerHTML = 1;
                 document.querySelector(".sample12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
                 document.querySelector(".sample12_M1").innerHTML = "filter(el => el === 300)";
-                document.querySelector(".sample12_R1").innerHTML = result;
-                consol.log(result);
+                document.querySelector(".sample12_R1").innerHTML = result1;
+                console.log(result1);
 
                 const arrNum2 = [100, 200, 300, 400, 500];
                 const result2 = arrNum2.filter(el => el === 600);
@@ -1456,7 +1460,7 @@
                 document.querySelector(".sample12_Q2").innerHTML = "[100, 200, 300, 400, 500]";
                 document.querySelector(".sample12_M2").innerHTML = "filter(el => el === 300)";
                 document.querySelector(".sample12_R2").innerHTML = result2;
-                consol.log(result);
+                console.log(result2);
 
                 const arrNum3 = [100, 200, 300, 400, 500];
                 const result3 = arrNum3.filter(el => el >= 300);
