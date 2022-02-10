@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,14 +17,12 @@
                 url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
             font-display: swap;
         }
-
         @font-face {
             font-family: 'TmonMonsori';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
         * {
             margin: 0;
             padding: 0;
@@ -36,21 +33,17 @@
             word-break: break-all;
             color: #223547;
         }
-
         a {
             text-decoration: none;
             color: #223547;
         }
-
         .number {
             margin: 10px;
         }
-
         .number li {
             list-style: none;
             display: inline;
         }
-
         .number li a {
             border: 1px solid #223547;
             width: 30px;
@@ -61,114 +54,93 @@
             line-height: 30px;
             transition: all 0.3s;
         }
-
         .number li.active a {
             background: #223547;
             color: #fff;
         }
-
         .board {
             margin: 5vw 10vw 10vw 10vw;
             width: 80vw;
-            background: #f1f3f6;
+            background: #F1F3F6;
             border: 2px solid #223547;
             padding: 3vw;
             text-align: center;
             border-radius: 10px;
         }
-
         .board .sub {
             font-size: 20px;
         }
-
         .board .sub a {
             font-size: 20px;
             border-bottom: 1px solid #223547;
         }
-
         .board h1 a {
             font-family: 'TmonMonsori';
             font-size: 80px;
             margin-bottom: 1vw;
         }
-
         .board .search {
             margin-bottom: 3vw;
         }
-
         .board .search label {
             display: none;
         }
-
         .board .search input {
             font-size: 24px;
-            bottom: 2px solid #223547;
+            border: 2px solid #223547;
             padding: 10px 40px;
             border-radius: 40px;
             width: 50%;
         }
-
         .board .count {
             text-align: right;
             color: #777;
         }
-
         .board .count em {
             font-style: normal;
             color: #223547;
         }
-
         .board .list {
             text-align: left;
         }
-
         .board .list li {
-            background-color: #bdd6e6;
+            background-color: #BDD6E6;
             margin: 5px 0;
             padding: 7px 10px;
             border-radius: 4px;
             list-style: none;
             transition: all 0.3s;
-            display: none;
         }
-
         .board .list li:hover {
-            background-color: #a5c3d5;
-            cursor: grabbing;
+            background-color: #A5C3D5;
+            cursor: grabbing
         }
-
-        @media (max-width:800px) {
+        @media (max-width: 800px){
             .board {
                 margin: 2vw 2vw 2vw 2vw;
                 width: 96vw;
                 padding: 4vw 2vw;
             }
-
             .board .sub {
                 font-size: 14px;
             }
-
             .board .sub a {
                 font-size: 14px;
             }
-
             .board h1 a {
                 font-size: 40px;
             }
-
             .board .search input {
                 font-size: 16px;
                 padding: 5px 20px;
                 width: 100%;
             }
-
             .board .list li {
                 font-size: 14px;
             }
         }
-
-      /* option */
-      .board .search span {
+        /* option */
+        .board .search span {
             border: 1px solid #223547;
             border-radius: 30px;
             padding: 5px 30px;
@@ -181,117 +153,99 @@
             color: #fff;
             cursor: pointer;
         }
-
+        .board .list li {
+            padding-right: 100px;
+            position: relative;
+        }
+        .board .list li span {
+            position: absolute;
+            right: 10px; top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+        .board .list li span::before {
+            content: 'view : ';
+            text-transform: uppercase;
+        }
     </style>
 </head>
-
 <body>
     <div id="wrap">
         <div class="number">
             <ul>
                 <li><a href="searchEffect01.html">1</a></li>
-                <li><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect02.html#">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
                 <li class="active"><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
                 <li><a href="searchEffect07.html">7</a></li>
                 <li><a href="searchEffect08.html">8</a></li>
-
             </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample11">filter() 이용해서 조회수 검색하기</a></span>
+            <span class="sub"><a href="../javascript06.html#sample11">filter()</a>를 이용하여 조회수 검색하기</span>
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
-
             <!-- 검색 영역 -->
             <div class="search">
-                <span>조회수 10개 이상</span>
-                <span>조회수 20개 이상</span>
-                <span>조회수 30개 이상</span>
-                <span>조회수 40개 이상</span>               
-             </div>
-
+                <span data-view="10">조회수 10개 이상</span>
+                <span data-view="20">조회수 20개 이상</span>
+                <span data-view="30">조회수 30개 이상</span>
+                <span data-view="40">조회수 40개 이상</span>
+            </div>
             <!-- 전체 목록 갯수 -->
             <div class="count">전체 목록 갯수 : 0개</div>
-         
             <!-- CSS 속성 리스트 -->
             <div class="list">
-                <ul></ul>                
+                <ul></ul>
             </div>
         </div>
     </div>
-
     <!-- script -->
     <script>
-        // const cssProperty = [
-        // {view: "10", name: "all" all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.},
-        // {view: "20", name: "animation" animation 속성은 애니메이션 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.},
-        // {view: "", name: "animation-delay"  animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다.},
-        // {view: "", name: "animation-direction"  animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다.},
-        // {view: "", name: "animation-duration"  animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다.},
-        // {view: "", name: "animation-fill-mode"  animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.},
-        // {view: "", name: "animation-interation-count"  animation-interation-count 속성은 애니메이션 반복 횟수를 설정합니다.},
-        // {view: "", name: "animation-name"  속성은 애니메이션 키프레임 이름을 설정합니다.},
-        // {view: "", name: "animation-play-state" animation-play-state 속성은 애니메이션 진행상태를 설정합니다.},
-        // {view: "", name: "backdrop-filter"  속성은 요소 뒤에 필터효과를 설정합니다.},
-        // {view: "", name: "backdrop-visibility"  backdrop-visibility 속성은 요소 뒷면을 나타낼지 여부를 설정합니다.},
-        // {view: "", name: "caption-side"  caption-side 속성은 테이블 캡션 위치를 설정합니다.},
-        // {view: "", name: "direction" data-type="위치"><strong>direction</strong> : direction 속성은 문장의 방향을 설정합니다.},
-        // {view: "", name: "empty-cells" data-type="속성"><strong>empty-cells</strong> : empty-cells 속성은 테이블의 빈요소의 속성을 설정합니다.},
-        // {view: "", name: "filter" data-type="속성"><strong>filter</strong> : filter 속성은 그래픽 효과를 설정합니다.},
-        // ];
-       
-        //view 값만 출력
-        for(let i = 0; i < cssProperty.length; i++){
-            console.log(cssProperty[i].view);
-        }
-        //name 값만 출력
-        cssProperty.forEach(ele => {
-            console.log(ele.name);
-        });
-        //map()
-        cssProperty.map(ele => {
-            console.log(ele.desc);
-        });
-
+        const cssProperty = [
+            {view: "10", name: "all", desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
+            {view: "20", name: "animation", desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
+            {view: "13", name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
+            {view: "40", name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
+            {view: "20", name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
+            {view: "40", name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+            {view: "15", name: "animation-iteration-count", desc: "animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
+            {view: "14", name: "animation-name", desc: "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
+            {view: "30", name: "animation-play-state", desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
+            {view: "50", name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
+            {view: "49", name: "backface-visibility", desc: "backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다."},
+            {view: "20", name: "caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+            {view: "40", name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
+            {view: "15", name: "filter", desc: "filter 속성은 그래픽 효과를 설정합니다."},
+            {view: "13", name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
+            {view: "15", name: "grid-template-columns", desc: "grid-template-columns 속성은 가로 컬럼의 크기와 위치 설정합니다."},
+        ];
         const searchBox = document.querySelectorAll(".search span");
         const cssList = document.querySelector(".list ul");
         const cssCount = document.querySelector(".count em");
-
-        //각각의 버튼을 클릭하면 경고창이 나올 수 있도록 작업하기
-
-        //버튼을 클릭했을 때
+        let listHtml = '';
+        //CSS 목록 보여주기
+        function updateList(){
+            for(const data of cssProperty){
+                listHtml += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+            }
+            cssList.innerHTML = listHtml;
+        }
+        updateList();
+        //버튼 클릭해서 데이터 가져오기
         searchBox.forEach(span => {
-            span.addEventListener("click", () => {
-                onClickButton();
+            span.addEventListener("click", (event) => {
+                const button = event.target;            //타겟 설정 : 몇 번째 버튼인지 알려고
+                const targetView = button.dataset.view; //타겟 값이 저장
+                const filterList = cssProperty.filter(data => data.view >= targetView);
+                listHtml = '';
+                for(const data of filterList) {
+                    listHtml += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+                }
+                cssList.innerHTML = listHtml;
             })
-        });
-
-        //변수(데이터 저장+변경+추가+전역/지역), 상수, 
-        //배열(순차적으로 여러개 저장), 
-        //객체(데이터 저장 (키와 값)), 
-        //함수(실행문 집합체, 재활용)
-
-        function onClickButton(){
-            //alert("call me by your name")
-
-        }
-
-        //CSS 리스트 출력하기
-        function upDataList(){
-            let list = "";
-            
-        //    for(let i = 0; i < cssProperty.length; i++){
-        //    list +="<li>"+ cssProperty[i].view +"</li>";
-        //}
-
-        cssList.innerHTML = list;
-          
-        }
-        upDataList();
-
-
+        })
         // //for문
         // for(let i = 0; i < cssProperty.length; i++){
         //     console.log(cssProperty[i].view);
@@ -317,19 +271,6 @@
         // for(let li of cssProperty){
         //     list += "<li>"+ li.view +"</li>";
         // }
-        
-        
     </script>
-
-
-
-
-
-
-
-
-
-
 </body>
-
 </html>

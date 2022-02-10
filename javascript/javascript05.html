@@ -52,10 +52,10 @@
     <main id="main">
         <div class="list">
             <ul>
-                <li class="active"><a href="#sample"></a> 01. 문자열 : 문자열 결합 / 템플릿 문자열</li>
-                <li><a href="#sample"></a> 02. 문자열 속성 : length : 문자열 길이 구하기 : 반환(숫자)</li>
-                <li><a href="#sample"></a> 03. 문자열 메서드 : toUpperCase() : 문자열 대문자 변경 : 반환(문자열)</li>
-                <li><a href="#sample"></a> 04. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경 : 반환(문자열)</li>
+                <li><a href="#sample01"></a> 01. 문자열 : 문자열 결합 / 템플릿 문자열</li>
+                <li><a href="#sample02"></a> 02. 문자열 속성 : length : 문자열 길이 구하기 : 반환(숫자)</li>
+                <li><a href="#sample03"></a> 03. 문자열 메서드 : toUpperCase() : 문자열 대문자 변경 : 반환(문자열)</li>
+                <li><a href="#sample03"></a> 04. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경 : 반환(문자열)</li>
                 <li><a href="#sample"></a> 05. 문자열 메서드 : trim() : 문자열 공백 제거 : 반환(문자열)</li>
                 <li><a href="#sample"></a> 06. 문자열 메서드 : indexOf() : 문자열 검색 : 반환(숫자)</li>
                 <li><a href="#sample"></a> 07. 문자열 메서드 : lastIndexOf() : 문자열 검색 : 반환(숫자)</li>
@@ -287,6 +287,16 @@
     </main>
 
     <script>
+        //#id 이동하기
+        document.querySelectorAll("a[href^='#']").forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
+
         //01. 문자열 : 문자열 결합 / 템플릿 문자열
         {
             const str1 = "자바스크립트";
@@ -377,9 +387,12 @@
         }
 
 
-        //{}
-
-        const text2 = str.slice();
+        //{8}
+        //16. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열)
+        {
+            const str1 = "/$|\?/"
+        }
+        
 
         
 
