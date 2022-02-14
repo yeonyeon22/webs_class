@@ -921,4 +921,15 @@ self _
 .member-form .list li {
     font-size: 14px;
     line-height: 1.6;
+    position: relative;
+    padding-left: 10px;
+}
+.member-form .list li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    
 }
