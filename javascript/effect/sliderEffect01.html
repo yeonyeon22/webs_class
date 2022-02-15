@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>슬라이드 이펙트</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/dracula.min.css">
     <style>
         @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
-
         * {
             margin: 0;
             padding: 0;
@@ -41,6 +42,7 @@
             background: rgba(92, 144, 160, 0.5);
             z-index: -1;
         }
+
         /* info */
         .title {
             position: absolute;
@@ -100,6 +102,7 @@
             background: #fff;
             color: #000;
         }
+
         /* modal */
         #modal {
             position: fixed;
@@ -109,10 +112,10 @@
             height: 100vh;
             background: rgba(0, 0, 0, 0.4);
             z-index: 1000;
-            transform: scale(0);  
+            transform: scale(0);
         }
         #modal.show {
-            animation: foldOut 1s ease forwards;      
+            animation: foldOut 1s ease forwards;
         }
         @keyframes foldOut {
             0% {transform: scaleX(0) scaleY(0.005)}
@@ -122,47 +125,48 @@
         .modal-wrap {
             display: flex;
             align-items: center;
-            justify-content: center; 
+            justify-content: center;
             flex-direction: column;
-            height: 100vh;          
+            height: 100vh;
         }
         .modal-close {
             margin-top: 10px;
         }
-        .modal-cont {           
+        .modal-cont {
             opacity: 1;
         }
         .code-view {
             width: 60vw;
-            height: 70vh;
+            min-height: 30vh;
             background: #fff;
             border: 1px solid #f2f2f2;
-            border-radius: 10px;
+            border-radius: 5px;
             overflow: hidden;
         }
         .view-header {
-            padding: 5px 0 5px 10px;
-            border-bottom: 1px solid #4CAF50;
+            padding: 7px 0 7px 10px;
+            border-bottom: 1px solid #eee;
         }
-        .view-header >span {
+        .view-header>span {
             width: 10px;
             height: 10px;
             display: inline-block;
+            border-radius: 10px;
         }
-        .view-header >span:nth-child(1) {
+        .view-header>span:nth-child(1) {
             background-color: red;
         }
-        .view-header >span:nth-child(2) {
+        .view-header>span:nth-child(2) {
             background-color: yellow;
         }
-        .view-header >span:nth-child(3) {
+        .view-header>span:nth-child(3) {
             background-color: green;
         }
         .view-title {
             border-bottom: 1px solid #eee;
             padding: 9px 10px 7px 10px;
             height: 37px;
-        }       
+        }
         .view-title li {
             display: inline;
         }
@@ -171,28 +175,34 @@
             font-size: 14px;
             text-transform: uppercase;
             padding: 12px 15px 8px 15px;
-            margin: 2px 5px 0 5px;
+            margin: 2px 0px 0 5px;
         }
         .view-title li.active a {
             color: #000;
-            border-bottom: spx solid #F56565;
+            border-bottom: 2px solid #F56565;
         }
         .view-cont {
             background-color: #e8e8e8;
             height: 100%;
-            padding: 20px;
+        }
+        .view-cont > div {
+            display: none;
+        }
+        .view-cont > div:first-child {
+            display: block;
+        }
+        .view-cont pre code.hljs {
+            line-height: 1.6;
         }
     </style>
 </head>
-<body>
-    
 
+<body>
     <!-- info -->
     <div class="title">
         <h1><a href="sliderEffect.html">Javascript Slider Effect01</a></h1>
         <p>이미지 슬라이드 - 페이드 효과</p>
     </div>
-
     <div class="number">
         <ul>
             <li class="active"><a href="sliderEffect01.html">1</a></li>
@@ -205,7 +215,6 @@
             <li><a href="sliderEffect01.html">8</a></li>
         </ul>
     </div>
-
     <div class="source">
         <button class="source-btn">소스보기</button>
         <div id="modal" class="show">
@@ -226,10 +235,54 @@
                             </ul>
                         </div>
                         <div class="view-cont">
-                            <div>HTML</div>
-                            <div>CSS</div>
-                            <div>JavaScript</div>
-                            <div>jQuery</div>
+                            <div>
+<pre><code class="language-javascript">const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+}
+modal();
+</code></pre> 
+                            </div>
+                            <div>
+<pre><code class="language-javascript">const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+}
+modal();
+</code></pre>
+                            </div>
+                            <div>
+<pre><code class="language-javascript">const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+}
+modal();
+</code></pre>
+                            </div>
+                            <div>
+<pre><code class="language-javascript">const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+}
+modal();
+</code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,9 +293,10 @@
     <!-- //info -->
 
     <!-- script -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"></script>
     <script>
         //modal
-        const modal = function(){
+        const modal = function () {
             //버튼을 클릭하면 modal창을 보이게 해주세요(show 추가)
             document.querySelector(".source-btn").addEventListener("click", () => {
                 document.querySelector("#modal").classList.add("show");
@@ -254,26 +308,33 @@
         modal();
 
         //tabmenu
-        const tabMenu = function(){
-            const tabBtn = document.querySelector(".view-title > ul > li");
-            const tabCont = document.querySelector(".view-cont > div");
+        const tabMenu = function () {
+            const tabBtn = document.querySelectorAll(".view-title > ul > li");
+            const tabCont = document.querySelectorAll(".view-cont > div");
 
             //각각의 버튼을 클릭하면 경고창이 나오게 할 것
-            tabBtn.forEach(btn => (btn) => {
+            tabBtn.forEach((btn, index) => {
                 btn.addEventListener("click", () => {
-                    //내가 클릭하지 않은 것은 active 삭제
+                    //모든 클래스 active 삭제
+                    tabBtn.forEach((el => {
+                        el.classList.remove("active");
+                    }))
 
                     //내가 클릭한 것만 active 추가
                     btn.classList.add("active");
+
+                    //모든 컨텐츠 박스 안 보이게
+                    tabCont.forEach(el => {
+                        el.style.display = "none";
+                    })
+
+                    //내가 클릭한 컨텐츠 박스 보이게
+                    tabCont[index].style.display = "block";
+
                 })
             })
-
-
-
-
         }
         tabMenu();
-
     </script>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -290,4 +351,5 @@
     </script> -->
 
 </body>
+
 </html>
