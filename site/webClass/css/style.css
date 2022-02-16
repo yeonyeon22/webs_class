@@ -930,6 +930,14 @@ self _
     height: 3px;
     background: #000;
     border-radius: 50%;
-    position: absolute;
-    
+    position: absolute;    
+}
+.member-form h4 {
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.member-form .blue {
+    background-color: #f5f5f5;
+    padding: 20px;
 }
