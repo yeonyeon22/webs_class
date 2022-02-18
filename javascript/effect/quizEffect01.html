@@ -84,11 +84,61 @@
             opacity: 0.5;
         }    
         .quiz__wrap {           
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 150px;
         }
         .quiz {
             max-width: 500px;
+            height: 500px;
+            background: #fff;
+            border: 8px ridge #cacaca;
+            margin: 10px;
         }
+        .quiz__category {
+            background: #cacaca;
+            text-align: center;
+            font-size: 14px;
+            color: #3b3b3b;
+            border: 3px ridge #cacaca;
+            padding: 3px 0;
+            position: relative;
+        }
+        .quiz__category::before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 5px;
+            height: 5px;
+            border: 6px ridge #cacaca;
+        }
+        .quiz__category::after {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 5px;
+            height: 5px;
+            border: 6px ridge #cacaca;
+        }
+        .quiz__question {
+            border-top: 6px ridge #cacaca;
+            border-bottom: 6px ridge #cacaca;
+            padding: 13px 30px;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        .quiz__number {
+            font-family: 'Cafe24Dangdanghae';
+            color: #64a30b;
+        }
+        .quiz__title {
+            font-family: 'Cafe24Dangdanghae';
+        }
+        .quiz__number {}
     </style>
 </head>
 <body>
@@ -111,7 +161,7 @@
                     <span class="quiz__number">01.</span>
                     <span class="quiz__title">웹 페이지와 그 내용을 구조화하기 위해 사용하는 코드는 무엇인가요?</span>
                 </h3>
-                <div class="answer"></div>
+                <div class="quiz__answer"></div>
             </div>
         </div>
     </main>
