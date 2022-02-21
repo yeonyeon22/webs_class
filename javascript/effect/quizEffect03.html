@@ -686,8 +686,8 @@
         <nav>
             <ul>
                 <li><a href="quizEffect01.html">1</a></li>
-                <li class="active"><a href="quizEffect02.html">2</a></li>
-                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li class="active"><a href="quizEffect03.html">3</a></li>
                 <li><a href="quizEffect04.html">4</a></li>
                 <li><a href="quizEffect05.html">5</a></li>
                 <li><a href="quizEffect06.html">6</a></li>
@@ -698,6 +698,72 @@
 
     <main id="main">
         <div class="quiz__wrap">
+            <div class="quiz">
+                <h2 class="quiz__type">HTML 퀴즈</h2>
+                <h3 class="quiz__question">
+                    <span class="quiz__number">01.</span>
+                    <span class="quiz__title">웹 페이지와 그 내용을 구조화하기 위해 사용하는 코드는 무엇인가요?</span>
+                </h3>
+                <div class="quiz__view">
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="quiz__answer">
+                        <!-- <input type="text" placeholder="정답을 적어주세요" class="quiz__input"></input> -->
+                        <button class="quiz__confirm">정답 확인하기</button>
+                        <div class="quiz__result"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz">
+                <h2 class="quiz__type">HTML 퀴즈</h2>
+                <h3 class="quiz__question">
+                    <span class="quiz__number">01.</span>
+                    <span class="quiz__title">웹 페이지와 그 내용을 구조화하기 위해 사용하는 코드는 무엇인가요?</span>
+                </h3>
+                <div class="quiz__view">
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="quiz__answer">
+                        <!-- <input type="text" placeholder="정답을 적어주세요" class="quiz__input"></input> -->
+                        <button class="quiz__confirm">정답 확인하기</button>
+                        <div class="quiz__result"></div>
+                    </div>
+                </div>
+            </div>
             <div class="quiz">
                 <h2 class="quiz__type">HTML 퀴즈</h2>
                 <h3 class="quiz__question">
@@ -740,50 +806,35 @@
     </footer>
 
     <script>
-        const quizType = document.querySelector(".quiz__type");
-        const quizNumber = document.querySelector(".quiz__number");
-        const quizAsk = document.querySelector(".quiz__ask");
-        const quizConfirm = document.querySelector(".quiz__confirm");
-        const quizResult = document.querySelector(".quiz__result");
-        const quizDog = document.querySelector(".quiz__dog")
-        const quiz__input = document.querySelector(".quiz__input");
-        
+        const quizType = document.querySelector("quiz__type");
+        const quizNumber = document.querySelector("quiz__number");
+        const quizAsk = document.querySelector("quiz__ask");
+        const quizConfirm = document.querySelector("quiz__confirm");
+        const quizResult = document.querySelector("quiz__result");
+        const quizView = document.querySelector("quiz__view");
+
+
         //문제 정보
-        const answerType = "javascript";
-        const answerNum = 1;
-        const answerAsk = "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?";
-        const answerResult = "javascript";
-        
-
-        //문제 출력
-        quizCategory.textContent = answerType;
-        quizNumber.textContent = answerNum + ". ";
-        quizAsk.textContent = answerAsk;
-        quizResult.textContent = "정답은 : " + answerResult + " 입니다."; 
-
-        //정답 숨기기
-        quizResult.style.display = "none";
-
-
-        //정답 확인
-        //정답 버튼을 클릭하면 정답 확인은 보이지 않되 숨겨진 정답은 보이도록 설정
-        //정답을 확인하면 강아지가 웃고 있어야 함
-        quizConfirm.addEventListener("click", () => {
-    
-            quizConfirm.style.display = "none";
-            quizResult.style.display = "block";
-
-            const userWord = quizInput.value.tolowercase().trim;    //사용자 데이터
-
-            //사용자 데이터 == 정답
-            if(userWord == answerResult){
-                quizView.classList.add("like");
-                quizResult.style.display = "block";
-            } else {
-                quizView.classList.add("dislike");
-                quizInput.style.display = "none";
+        const quizInfo = [
+            {
+                answerType : "javascript",
+                answerNum : 1,
+                answerAsk : "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
+                answerResult : "javascript"
+            },
+            {
+                answerType : "html",
+                answerNum : 2,
+                answerAsk : "웹 페이지를 표현하기 위한 마크업 언어는 무엇인가요?",
+                answerResult : "html"
+            },
+            {
+                answerType : "css",
+                answerNum : 3,
+                answerAsk : "웹 페이지를 꾸미기 위해서 사용하는 언어는 무엇인ㄱ아ㅛ??",
+                answerResult : "css"
             }
-        });
+        ]
     </script>
 </body>
 
