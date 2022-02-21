@@ -113,11 +113,11 @@
     &lt;section&gt;
         &lt;div class="slider__wrap"&gt;
             &lt;div class="slider__img"&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/arch01.jpg" alt="이미지1"&lt;&gt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/arch02.jpg" alt="이미지2"&lt;&gt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/arch03.jpg" alt="이미지3"&lt;&gt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/arch04.jpg" alt="이미지4"&lt;&gt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/arch05.jpg" alt="이미지5"&lt;&gt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/arch06.jpg" alt="이미지1"&lt;&gt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/arch07.jpg" alt="이미지2"&lt;&gt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/arch08.jpg" alt="이미지3"&lt;&gt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/arch09.jpg" alt="이미지4"&lt;&gt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/arch10.jpg" alt="이미지5"&lt;&gt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/section&gt;
@@ -125,12 +125,7 @@
 </code></pre>
                                 </div>
                                 <!-- //cont1 -->
-                                <div>
-<pre><code class="language-javascript">
-    
-</code></pre>
-                                </div>
-                                <!-- //cont2 -->
+                               
                                 <div>
 <pre><code class="language-javascript">
     .slider__wrap {
@@ -169,7 +164,7 @@
     .slider:nth-child(5) {z-index: 1;}  
 </code></pre>
                                 </div>
-                                <!-- //cont3 -->
+                                <!-- //cont2 -->
                                 <div>
 <pre><code class="language-javascript">
 </code></pre>
@@ -238,12 +233,11 @@
             //GSAP 애니메이션
             gsap.to(sliderInner, {duration:0.4, 
             left: -800 * currentIndex,
-            ease: "expo.out"
-            });
+            ease: "slow(0.7, 0.7, false)"
+            })
 
-        }, 3000);
+        }, 1000)
     </script>
 
 </body>
-
 </html>
