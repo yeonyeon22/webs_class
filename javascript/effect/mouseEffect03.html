@@ -41,68 +41,42 @@
             border-bottom: 0.15vw dashed orange;
             color: orange;
         }
+        
         .cursor {
             position: absolute;
             left: 0;
             top: 0;
-            width: 10px;
-            height: 10px;
+            width: 200px;
+            height: 200px;
+            z-index: -1;
             border-radius: 50%;
-            z-index: 9999;
-            background-color: rgba(255,255,255,0.1);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s, apacity 0.2s;        
+            background-image: url(img/arch11.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            border: 5px solid #fff;
         }
-        .cursor-follower {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            left: 0;
-            top: 0;
-            border-radius: 50%;
-            background-color: rgba(255,255,255,0.3);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s, apacity 0.2s;   
-        }
-        .cursor.active {
-            transform: scale(0);
-        }
-        .cursor-follower.active {
-            transform: scale(5);
-            background: rgba(255,166,0,0.7);
-        }
-
-        .cursor.show {
-            transform: scale(0);
-            background: rgba(135, 211, 194, 0.596);
-        }
-        .cursor-follower.show {
-            transform: scale(10);
-            background: rgba(88, 199, 175, 0.596);
-        }
+        
     </style>
 </head>
 
-<body class="img08">
+<body class="img09">
 
     <!-- main -->
     <main>
-        <section id="mouseType02">
+        <section id="mouseType03">
 
             <div class="cursor"></div>
             <div class="cursor-follower"></div>
 
             <div class="mouse__wrap">
                 <p>
-                    I say goodbye to romance
-                    Goodbye to friends    
-                    <span>Goodbye to all</span> the past                 
+                    Some people want diamond rings  
+                    Some just <span>want everything</span>              
                 </p>
-                <p>                    
-                    I guess that we'll meet
-                    <span>We'll meet in the end</span>
+                <p>         
+                    But everything <span>means nothing </span>
+                    If I ain't <span>got you</span>
                 </p>
             </div>
         </section>
@@ -112,14 +86,14 @@
     <!-- info -->
     <div class="info">
         <div class="title">
-            <h1><a href="mouseEffect.html">JavaScript Mouse Effect02</a></h1>
-            <p>마우스 이펙트 - 따라다니기2</p>
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect03</a></h1>
+            <p>마우스 이펙트 - 조명 효과</p>
         </div>
         <div class="number">
             <ul>
                 <li><a href="mouseEffect01.html">1</a></li>
-                <li class="active"><a href="mouseEffect02.html">2</a></li>
-                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li class="active"><a href="mouseEffect03.html">3</a></li>
                 <li><a href="mouseEffect04.html">4</a></li>
                 <li><a href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
@@ -257,44 +231,30 @@
     <script src="js/custom.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
-        const cursor = document.querySelector(".cursor");
-        const follower = document.querySelector(".cursor-follower");
 
-        window.addEventListener("mousemove", e => {
-            //커서 좌표값 할당
-            // cursor.style.left = e.pageX -5 + "px";
-            // cursor.style.top = e.pageY -5 + "px";
-            // follower.style.left = e.pageX -15 + "px";
-            // follower.style.top = e.pageY -15 + "px";
+        // const circle1 = document.querySelector(".cursor").clientWidth;   //190 : border 빠진 상태
+        // const circle2 = document.querySelector(".cursor").offsetWidth;   //200 : border 포함 상태
 
-            gsap.to(cursor, {duration: .3, left: e.pageX -5, top: e.pageY -5});
-            gsap.to(follower, {duration: .8, left: e.pageX -5, top: e.pageY -15});
+        //bottom height left right top width x y
 
-            //오버 효과
-            //span 오버했을 때 클래스 active 추가/ 나갔을 때 active 삭제
-            //self_wrong
-            // document.querySelector("span").addEventListener("mouseover", () => {
-            //     document.querySelector(".cursor").classList("span");
-            // })
-            // document.querySelector("span").addEventListener("mouseout", () => {
-            //     document.querySelector(".cursor").classList("span");
-            // })
+        // const circle = {
+        //     bottom : 0,
+        //     height : 200,
+        //     left : 0,
+        //     width : 200
+        // }
 
-            document.querySelectorAll(".mouse__wrap span").forEach(span => {
-                span.addEventListener("mouseenter", () => {
-                    cursor.classList.add("active");
-                    follower.classList.add("active");
-                });
-                span.addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                    follower.classList.remove("active");
-                })
-            })
+        const circle3 = document.querySelector(".cursor").getBoundingClientRect(); 
+        function follow(e) {            
 
-            //출력
-            document.querySelector(".pageX").innerTEXT = e.pageX;
-            document.querySelector(".pageY").innerTEXT = e.pageY;
-        })
+            gsap.to(".cursor", {duration:.3, left: e.pageX -circle.width/2, top: e.pageY -circle.height/2});
+
+            //출력용
+            document.querySelector(".pageX").innerText = e.pageX;
+            document.querySelector(".pageY").innerText = e.pageY;
+        }
+
+        window.addEventListener("mousemove", follow);
 
     </script>
 </body>

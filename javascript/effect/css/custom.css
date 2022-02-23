@@ -49,6 +49,9 @@ body.img07 {
 body.img08 {
     background-image: url(../img/arch10.jpg);
 }
+body.img09 {
+    background-image: url(../img/arch11.jpg);
+}
 
 body::before {
     content: '';
