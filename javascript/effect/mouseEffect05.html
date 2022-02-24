@@ -32,6 +32,7 @@
             transform: rotateX(0deg) rotateY(0deg);
             transform-style: preserve-3d;
             will-change: transform;
+            transition: all 0.4s;
         }  
         .mouse__img figure {
             width: 50vw;
@@ -194,10 +195,24 @@
             let centerPageX = window.innerWidth/2 - mousePageX;
             let centerPageY = window.innerHeight/2 - mousePageY;
 
+            //최소값은 -50 최대값은 50 설정
+            let maxPageX = Math.max(-800, Math.min(30, centerPageX));
+            let maxPageY = Math.max(-300, Math.min(30, centerPageY));
+
+            //각도 줄이는 설정
+            let anlexpageX = maxPageX * 0.12;
+            let anlexpageY = maxPageY * 0.12;
+
+            //부드럽게 설정
+            let softPageX = 0, softPageY = 0;
+            
+            softPageX += (maxPageX - softPageX) * 0.4;
+            softPageY += (maxPageY - softPageY) * 0.4;
+
             //이미지 움직이기
             //transform: rotateX(0deg) rotateY(0deg);
             const imgMove = document.querySelector(".mouse__img");
-            imgMove.style.transform = "rotateX("+centerPageX+"deg) rotateY("+centerPageY+"deg)";
+            imgMove.style.transform = "rotateX("+softPageY+"deg) rotateY("+ -softPageX+"deg)";
 
             //원 크기
             let circleWidth = mousePageX-circle.width/2;
