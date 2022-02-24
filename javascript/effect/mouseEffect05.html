@@ -204,7 +204,7 @@
             let circleHeight = mousePageY-circle.height/2;            
 
             //커서
-            gsap.to(".cursor", {duration: .3, left: mousePageX - circleWidth, top: mousePageY - circle.height/2});
+            gsap.to(".cursor", {duration: .3, left: circleWidth, top: circleHeight});
 
             //출력
             document.querySelector(".mousePageX").textContent = mousePageX
