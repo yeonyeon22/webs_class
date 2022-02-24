@@ -28,8 +28,8 @@
         .mouse__img {
             position: relative;
             text-align: center;
-            perspective: 600px;
-            transform: rotateX(0deg) rotateY(0deg);
+            /* perspective: 600px; */
+            transform: perspective(600) rotateX(0deg) rotateY(0deg);
             transform-style: preserve-3d;
             will-change: transform;
             transition: all 0.4s;
@@ -205,14 +205,16 @@
 
             //부드럽게 설정
             let softPageX = 0, softPageY = 0;
-            
+
             softPageX += (maxPageX - softPageX) * 0.4;
             softPageY += (maxPageY - softPageY) * 0.4;
 
             //이미지 움직이기
             //transform: rotateX(0deg) rotateY(0deg);
             const imgMove = document.querySelector(".mouse__img");
-            imgMove.style.transform = "rotateX("+softPageY+"deg) rotateY("+ -softPageX+"deg)";
+            imgMove.style.transform = "perspective(600px) rotateX("+softPageY+"deg) rotateY("+ -softPageX+"deg)";
+
+            gsap.to(".mouse__img", {duration})
 
             //원 크기
             let circleWidth = mousePageX-circle.width/2;
