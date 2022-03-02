@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>패럴랙스 효과</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Six+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Poppins:ital,wght@1,900&family=Six+Caps&display=swap" rel="stylesheet">
     <style>
-        
         * {
             margin: 0;
             padding: 0;
@@ -65,6 +67,7 @@
             text-align: center;
             line-height: 30px;
         }
+
         #parallax__nav li.active a {
             background: #fff;
             color: #000;
@@ -73,70 +76,152 @@
 
         #parallax__cont {
             max-width: 1600px;
-            width: 100%;
+            width: 98%;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.1);
+            /* background-color: rgba(255, 255, 255, 0.1); */
         }
 
         .content__item {
             width: 1000px;
+            max-width: 70vw;
             margin: 30vw auto;
-            background-color: rgba(255, 255, 255, 0.3);
-            text-align: right;
-        }
-        .content__item:nth-child(even) {
-            margin-left: auto;
+            /* background-color: rgba(255, 255, 255, 0.3); */
             text-align: left;
+            margin-right: 0;
+            position: relative;
+            padding-top: 15vw;
         }
 
-        .content__item__num {}
-        .content__item__title {}
+        .content__item:nth-child(even) {
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .content__item__num {
+            font-size: 35vw;
+            position: absolute;
+            left: -5vw;
+            top: -10vw;
+            opacity: 0.07;
+            font-family: "Lato";
+            font-weight: 100;
+        }
+
+        .content__item:nth-child(even) .content__item__num {
+            left: auto;
+            right: -5vw;
+        }
+
+        .content__item__title {
+            padding-bottom: 5px;
+            font-weight: 400;
+        }
+
         .content__item__imgWrap {
             width: 100%;
-            height: 500px;
+            padding-bottom: 56.25%;
             background: #000;
             position: relative;
+            overflow: hidden;
         }
+
         .content__item__img {
             position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
             background-repeat: no-repeat;
+            background-position: center center;
             background-size: cover;
+            filter: saturate(0%);
+            transition: all 1s;
         }
+
+        .content__item__img:hover {
+            filter: saturate(100%);
+            transform: scale(1.025);
+        }
+
         .content__item:nth-child(1) .content__item__img {
             background-image: url(img/arch01.jpg);
         }
+
         .content__item:nth-child(2) .content__item__img {
             background-image: url(img/arch02.jpg);
         }
+
         .content__item:nth-child(3) .content__item__img {
             background-image: url(img/arch03.jpg);
         }
+
         .content__item:nth-child(4) .content__item__img {
             background-image: url(img/arch04.jpg);
         }
+
         .content__item:nth-child(5) .content__item__img {
             background-image: url(img/arch05.jpg);
         }
+
         .content__item:nth-child(6) .content__item__img {
             background-image: url(img/arch06.jpg);
         }
+
         .content__item:nth-child(7) .content__item__img {
             background-image: url(img/arch07.jpg);
         }
+
         .content__item:nth-child(8) .content__item__img {
             background-image: url(img/arch08.jpg);
         }
+
         .content__item:nth-child(9) .content__item__img {
             background-image: url(img/arch09.jpg);
         }
-        .content__item__desc {}
-       
+
+        .content__item__desc {
+            font-size: 4vw;
+            line-height: 1.4;
+            margin-top: -6vw;
+            margin-left: -5vw;
+            z-index: 100;
+            position: relative;
+            word-break: keep-all;
+        }
+
+        .content__item:nth-child(even) .content__item__desc {
+            margin-left: auto;
+            margin-right: -4vw;
+        }
 
         #parallax__footer {}
+
+        /* info */
+        .scrollTop {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+        .scrollInfo {
+            position: fixed;
+            left: 20px;
+            bottom: 70px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .scrollInfo li {
+            list-style: none;
+            line-height: 1.6;
+        }
+
     </style>
 </head>
 
@@ -265,6 +350,115 @@
         </div>
     </main>
     <!-- //main -->
+
+    <!-- info -->
+    <div class="scrollTop">
+        scrollTop : <span>0</span>px
+    </div>
+    <div class="scrollInfo">
+        <ul>
+            <li>#section1 offset() : <span class="offset1">0</span>px</li>
+            <li>#section2 offset() : <span class="offset2">0</span>px</li>
+            <li>#section3 offset() : <span class="offset3">0</span>px</li>
+            <li>#section4 offset() : <span class="offset4">0</span>px</li>
+            <li>#section5 offset() : <span class="offset5">0</span>px</li>
+            <li>#section6 offset() : <span class="offset6">0</span>px</li>
+            <li>#section7 offset() : <span class="offset7">0</span>px</li>
+            <li>#section8 offset() : <span class="offset8">0</span>px</li>
+            <li>#section9 offset() : <span class="offset9">0</span>px</li>
+        </ul>
+    </div>
+
+    <!-- script -->
+    <script>
+
+        document.querySelectorAll("#parallax__nav li a").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        })
+
+        window.addEventListener("scroll",() => {
+            // let scrollTop = window.pageYOffset;
+            // let scrollTop = document.documentElement.scrollTop;
+            // let scrollTop = window.scrollY;
+
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+            if(scrollTop > document.getElementById("section1").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(1)").classList.add("active");
+            }
+            if(scrollTop > document.getElementById("section2").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(2)").classList.add("active");
+            }
+            if(scrollTop > document.getElementById("section3").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(3)").classList.add("active");
+            }
+            if(scrollTop > document.getElementById("section4").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(4)").classList.add("active");
+            }
+            if(scrollTop > document.getElementById("section5").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(5)").classList.add("active");
+            }
+            if(scrollTop > document.getElementById("section6").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(6)").classList.add("active");
+            }
+            if(scrollTop > document.getElementById("section7").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(7)").classList.add("active");
+            }
+            if(scrollTop > document.getElementById("section8").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(8)").classList.add("active");
+            }
+            if(scrollTop > document.getElementById("section9").offsetTop){
+                document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__nav ul li:nth-child(9)").classList.add("active");
+            }
+
+
+
+            //info
+            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+
+            document.querySelector(".offset1").innerText = document.getElementById("section1").offsetTop
+            document.querySelector(".offset2").innerText = document.getElementById("section2").offsetTop
+            document.querySelector(".offset3").innerText = document.getElementById("section3").offsetTop
+            document.querySelector(".offset4").innerText = document.getElementById("section4").offsetTop
+            document.querySelector(".offset5").innerText = document.getElementById("section5").offsetTop
+            document.querySelector(".offset6").innerText = document.getElementById("section6").offsetTop
+            document.querySelector(".offset7").innerText = document.getElementById("section7").offsetTop
+            document.querySelector(".offset8").innerText = document.getElementById("section8").offsetTop
+            document.querySelector(".offset9").innerText = document.getElementById("section9").offsetTop
+        })
+    </script>
 
 </body>
 
