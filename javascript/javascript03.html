@@ -523,6 +523,39 @@
 
             document.write(func("함수가 실행되었습니다."));
         }
+        //내부 함수
+        {
+            function func(){
+                function funA(){
+                    document.write("함수가 실행되었습니다.");
+                }
+                funA();
+                function funcB(){
+                    document.write("함수가 실행되었습니다.");
+                }
+                funB();
+            }
+            func();
+        }
+        //즉시 실행 함수
+        {
+            // function func(){
+            //     document.write("함수가 실행되었습니다.");
+            // }
+            // func();
+
+            //or
+
+            // (function(){
+            //     document.write("함수가 실행되었습니다.");
+            // }());
+
+            //or
+
+            (() => {
+                document.write("함수가 실행되었습니다.");
+            })();
+        }
     </script>
       <!-- script -->
       <script src="assets/js/prism.js"></script>
