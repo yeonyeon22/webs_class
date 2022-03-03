@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3차 평가_문항1_Mar 03</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "aside section"
+                "footer footer"
+            ;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 100px 780px 100px;
+        }
+        #header {
+            grid-area: header;
+            background-color: #e1bee7;
+        }
+        #aside {
+            grid-area: aside;
+            background-color: #ce93d8;
+        }
+        #section {
+            grid-area: section;
+            background-color: #c570d4;
+        }
+        #footer {
+            grid-area: footer;
+            background-color: #ae51be;
+        }
+        @media (max-width:1300px){
+            #wrap {
+                width: 96%;
+                grid-template-areas: 
+                    "header header"
+                    "aside section"                    
+                    "footer footer"                
+                ;
+                grid-template-columns: 20% 80%;
+                grid-template-rows: 100px 560px 100px;
+            }
+        }
+        @media (max-width:768px){
+            #wrap {
+                width: 100%;
+                grid-template-areas: 
+                    "header header"
+                    "aside section"                    
+                    "footer footer"
+                ;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 100px 200px 100px;
+            }
+        }
+        @media (max-width:480px){
+            #wrap {
+                grid-template-areas: 
+                    "header"
+                    "aside"                    
+                    "section"
+                    "footer"
+                ;
+                grid-template-columns: 100%;
+                grid-auto-rows: 100px 100px 120px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

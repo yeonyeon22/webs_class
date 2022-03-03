@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03차 평가-UI 디자인_0303</title>
+    <title>3차 평가_문항3_Mar 03</title>
     <style>
         *{
             margin: 0;
@@ -50,8 +50,47 @@
             grid-area: footer;
             background-color: #039BE5;
         }
-        @media (max-width:1300px){
-            
+        @media (max-width:1200px){
+            #wrap {
+                width: 96%;
+                grid-template-areas: 
+                    "header header"
+                    "aside article1"
+                    "aside article2"
+                    "article3 article3"
+                    "footer footer"                
+                ;
+                grid-template-columns: 40% 60%;
+                grid-template-rows: 100px 200px 200px 200px 50px;
+            }
+        }
+        @media (max-width:768px){
+            #wrap {
+                width: 100%;
+                grid-template-areas: 
+                    "header header"
+                    "aside aside"
+                    "article1 article2"
+                    "article3 article3"
+                    "footer footer"
+                ;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 100px 100px 200px 100px 50px;
+            }
+        }
+        @media (max-width:480px){
+            #wrap {
+                grid-template-areas: 
+                    "header"
+                    "aside"
+                    "article1"
+                    "article2"
+                    "article3"
+                    "footer"
+                ;
+                grid-template-columns: 100%;
+                grid-auto-rows: 100px 200px 200px 200px 50px;
+            }
         }
     </style>
 </head>
