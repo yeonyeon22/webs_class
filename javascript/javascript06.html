@@ -1604,10 +1604,27 @@
             const text = "javascript";
             const result = Array.from(text);
 
-            document.querySelector(".sample14_N4").innerHTML = 1;
-            document.querySelector(".sample14_Q4").innerHTML = "javascript";
-            document.querySelector(".sample14_M4").innerHTML = "Array.from()";
-            document.querySelector(".sample14_R4").innerHTML = result;
+            document.querySelector(".sample14_N1").innerHTML = 1;
+            document.querySelector(".sample14_Q1").innerHTML = "javascript";
+            document.querySelector(".sample14_M1").innerHTML = "Array.from()";
+            document.querySelector(".sample14_R1").innerHTML = result;
+            console.log(result)
+
+            const text2 = "javascript";
+            const result2 = Array.from(text2, el => el + "10");
+
+            document.querySelector(".sample14_N2").innerHTML = 2;
+            document.querySelector(".sample14_Q2").innerHTML = "javascript";
+            document.querySelector(".sample14_M2").innerHTML = "Array.from()";
+            document.querySelector(".sample14_R2").innerHTML = result2;
+
+            const text3 = "javascript";
+            const result3 = [...text3].map(el => el);
+
+            document.querySelector(".sample14_N3").innerHTML = 3;
+            document.querySelector(".sample14_Q3").innerHTML = "javascript";
+            document.querySelector(".sample14_M3").innerHTML = ".map()";
+            document.querySelector(".sample14_R3").innerHTML = result3;            
         }
         
 

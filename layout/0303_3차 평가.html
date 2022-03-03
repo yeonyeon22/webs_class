@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03차 평가-UI 디자인_0303</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body {
+            background-color: #E1F5FE;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "aside article1"
+                "aside article2"
+                "aside article3"
+                "footer footer"
+            ;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 100px 260px 260px 260px 100px;
+        }
+        #header {
+            grid-area: header;
+            background-color: #B3E5FC;
+        }
+        #aside {
+            grid-area: aside;
+            background-color: #81D4FA;
+        }
+        #article1 {
+            grid-area: article1;
+            background-color: #4FC3F7;
+        }
+        #article2 {
+            grid-area: article2;
+            background-color: #29B6F6;
+        }
+        #article3 {
+            grid-area: article3;
+            background-color: #03A9F4;
+        }
+        #footer {
+            grid-area: footer;
+            background-color: #039BE5;
+        }
+        @media (max-width:1300px){
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <aside id="aside"></aside>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <article id="article3"></article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
