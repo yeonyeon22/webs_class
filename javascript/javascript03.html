@@ -556,6 +556,24 @@
                 document.write("함수가 실행되었습니다.");
             })();
         }
+
+        //파라미터 함수
+        {
+            function func(str="함수가 실행되었습니다."){
+                document.write(str);
+            }
+            func();
+        }
+
+        //아규먼트 함수
+        {
+            function func(a, b){
+                document.write(arguments[0]);
+                document.write(arguments[1]);
+                //document.write(arguments[2]);
+            }
+            func("함수가 실행되었습니다","함수가 실행되었습니다.")
+        }
     </script>
       <!-- script -->
       <script src="assets/js/prism.js"></script>
