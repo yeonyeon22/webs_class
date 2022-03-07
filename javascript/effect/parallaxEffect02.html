@@ -266,7 +266,7 @@
             top: 0;
             left: 0;
             border-radius: 50%;
-            transition: all .2s ease;
+            transition: transform .2s ease;
         }
         #parallax__dot li.active {
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
@@ -286,20 +286,20 @@
         <p>패럴랙스 스크롤링 효과 - 사이드 메뉴 이동</p>
         <ul>
             <li><a href="parallaxEffect01.html">1</a></li>
-            <li><a href="parallaxEffect01.html">2</a></li>
-            <li><a href="parallaxEffect01.html">3</a></li>
-            <li><a href="parallaxEffect01.html">4</a></li>
-            <li><a href="parallaxEffect01.html">5</a></li>
-            <li><a href="parallaxEffect01.html">6</a></li>
-            <li><a href="parallaxEffect01.html">7</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //parallax__title -->
 
     <nav id="parallax__dot">
         <ul>
-            <li class="active"><a href="#section1"><span>s1</span></a></li>
-            <li><a href="#section2"><span>s2</span></a></li>
+            <li><a href="#section1"><span>s1</span></a></li>
+            <li class="active"><a href="#section2"><span>s2</span></a></li>
             <li><a href="#section3"><span>s3</span></a></li>
             <li><a href="#section4"><span>s4</span></a></li>
             <li><a href="#section5"><span>s5</span></a></li>
@@ -423,13 +423,53 @@
 
     <!-- script -->
     <script>
+        document.querySelectorAll("#parallax__dot a").forEach(el => {
+            el.addEventListener("click", e =>{
+                e.preventDefault();
+
+                // window.scroll(0, 1000);
+                // window.scroll({left: 0, top:1000});
+                // window.scroll({left: 0, top: 1000, behavior: "smooth"});
+
+                // window.scrollTo(0, 1000);
+                // window.scrollTo({left: 0, top:1000});
+                // window.scrollTo({left: 0, top: 1000, behavior: "smooth"});
+
+                // window.scrollBy(0, 1000);
+                // window.scrollBy({left: 0, top:1000});
+                // window.scrollBy({left: 0, top: 1000, behavior: "smooth"});
+
+                document.querySelector(el.getAttribute("href")).scrollIntoView({behavior: "smooth"});
+            })
+        })
+
+
         window.addEventListener("scroll", () => {
             let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
 
             document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
 
+            // for(let i = 1; i<=9; i++){
+            //     if(scrollTop >= document.getElementById("section" +i).offsetTop -2){
+            //         document.querySelectorAll("#parallax__dot li").forEach(li => {
+            //             li.classList.remove("active");
+            //         })
+            //         document.querySelector("#parallax__dot li:nth-child("+i+")").classList.add("active");
+            //     }
+            // }
 
-        })
+            //forEach
+            document.querySelectorAll(".content__item").forEach((element, index) => {
+                if(scrollTop >= element.offsetTop -2){
+                    document.querySelectorAll("#parallax__dot li").forEach(li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector("#parallax__nav li:nth-child("+(index+1)+")").classList.add("active");
+                }
+            })
+        });
+
+
             // // 스크롤 값 구하는 방법
             // window.screenY
             // window.pageYOffset
