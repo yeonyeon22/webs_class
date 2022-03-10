@@ -285,7 +285,102 @@ PRIMARY KEY (myMemberID)
            
 
             </div>
-<!-- //box -->
+<!-- //box -->  
+
+
+
+<!-- box -->
+<div class="bs-docs-section">
+    <h2 id="intro7" class="page-header">테이블 데이터</h2>
+    <h3 id="intro7-1" class="page-header">데이터 입력하기</h3>
+    <div class="bs-callout bs-callout-info">
+        INSERT INTO 테이블 이름(필드명) VALUES(데이터)
+    </div>
+<pre class="language-js"><code>
+    INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES('web@naver.com','webs','1234','00-04-05','33','0327');
+</code></pre>
+    <h3 id="intro7-1" class="page-header">데이터 불러오기</h3>
+    <div class="bs-callout bs-callout-info">
+        show tables;
+    </div>
+<pre class="language-js"><code>
+
+</code></pre>
+    <h3 id="intro7-1" class="page-header">데이터 수정하기</h3>
+    <div class="bs-callout bs-callout-info">
+        show tables;
+    </div>
+<pre class="language-js"><code>
+
+</code></pre>
+    <h3 id="intro7-1" class="page-header">테이블 입력하기</h3>
+
+
+
+
+<pre class="language-js"><code>CREATE TABLE myMember (
+myMemberID int(10) unsigned auto_increment comment "회원 고유번호",
+youEmail varchar(40) NOT NULL comment "회원 아이디",
+youName varchar(12) NOT NULL comment "회원 이름",
+youPass varchar(20) NOT NULL comment "회원 비밀번호",
+youBirth varchar(12) NOT NULL comment "회원 생일",
+regTime int(11) NOT NULL comment "회원 가입 시간",
+PRIMARY KEY (myMemberID)
+) charset=utf8 comment "회원 정보 테이블";
+</code></pre>
+
+    <h3 id="intro7-2" class="page-header">데이터 전체 보기</h3>
+        <div class="bs-callout bs-callout-info">
+            show tables;
+        </div>
+<pre class="language-js"><code>
+
+</code></pre>
+    <h4>myMemberID가 6번인 경우</h4>SELECT * FROM myMember WHERE myMemberID = 6;
+<pre class="language-js"><code>
+
+</code></pre>
+    <h4>이메일 중에 네이버 텍스트를 포함하는 경우</h4>
+<pre class="language-js"><code>SELECT * FROM myMember WHERE youEmail LIKE '%naver';
+
+    SELECT * FROM myMember WHERE youEmail LIKE '%naver';
+
+    SELECT * FROM myMember WHERE youEmail LIKE 'naver%';
+
+</code></pre>
+
+    <h3 id="intro7-3" class="page-header">데이터 수정하기</h3>
+        <div class="bs-callout bs-callout-info">
+           
+        </div>
+<pre class="language-js"><code>
+
+</code></pre>
+    <h3 id="intro7-4" class="page-header">데이터 삭제하기</h3>
+        <div class="bs-callout bs-callout-info">
+            
+        </div>
+        
+<pre class="language-js"><code>
+
+</code></pre>
+
+
+</div>
+
+
+    <!-- //box -->
+
+
+
+
+
+
+
+
+
+
+
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
