@@ -322,13 +322,13 @@
             0% {width: 100%; height: 0; top: 0}
             50% {width: 100%; height: 100%; top: 0}
             80% {width: 100%; height: 100%; top: 0}
-            100% {width: 100%; height: 0; top: 0}
+            100% {width: 100%; height: 0; top: 100%}
         }
         @keyframes reveal-BBT {
-            0% {width: 100%; right: 0;}
-            50% {width: 100%; right: 0;}
-            80% {width: 100%; right: 0;}
-            100% {width: 100%; right: 100%;}
+            0% {width: 100%; height: 0; top: auto; bottom: 0}
+            50% {width: 100%; height: 100%; top: auto; bottom: 0}
+            80% {width: 100%; height: 100%; top: auto; bottom: 0}
+            100% {width: 100%; height: 0%; top: auto; bottom: 100%}
         }
     </style>
 </head>
@@ -435,10 +435,10 @@
                 <section id="section7" class="content__item">
                     <span class="content__item__num">07</span>
                     <h2 class="content__item__title">Section7</h2>
-                    <figure class="content__item__imgWrap">
+                    <figure class="content__item__imgWrap reveal reveal-two reveal-BTT">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">You ain't ever gonna burn my heart out</p>
+                    <p class="content__item__desc reveal reveal-two" data-delay="500">You ain't ever gonna burn my heart out</p>
                 </section>
                 <!-- //section7 -->
             </section>
@@ -476,17 +476,12 @@
 
     <!-- script -->
     <script src="js/gsap.min.js"></script>
-    <script>   
-     
-
-        document.querySelectorAll(".content__item__desc").forEach(desc => {
-            let splitText = desc.innerText;
-            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
-                splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-                desc.innerHTML = splitWrap;
-                desc.setAttribute("aria-label", splitText);
-        })
-
+    <script>  
+    
+        //만약에 reveal 클래스가 있는데
+        //글씨를 span으로 감싸주고
+        //글씨를 다 넣어줘야 함
+      
         function scroll(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
@@ -494,9 +489,20 @@
 
             reveal.forEach(elem => {
                 let revealOffset = elem.offsetTop + elem.parentElement.offsetTop;
+                let revealDelay = elem.dataset.delay;
+
+                // if(scrollTop >= revealOffset - window.innerHeight/2){
+                //     elem.classList.add("show");
+                // }
 
                 if(scrollTop >= revealOffset - window.innerHeight/2){
-                    elem.classList.add("show");
+                    if(revealDelay == undefined){
+                        elem.classList.add("show");
+                    } else {
+                        setTimeout(() => {
+                            alem.classList.add("show");
+                        }, revealDelay)
+                    }
                 }
             })            
 
