@@ -267,15 +267,16 @@ PRIMARY KEY (myMemberID)
     ALTER TABLE myMember ADD youGender enum('m','w','x') default 'x' comment "남성은 m, 여성은 w" AFTER youBirth;
 </code></pre>
 
-                <h3 id="intro5-2" class="page-header">필드 수정하기</h3>
+                <h3 id="intro6-2" class="page-header">필드 수정하기</h3>
                     <div class="bs-callout bs-callout-info">
-
+                        ALTER TABLE 테이블명 MODIFY 수정할 필드명
                     </div>
 <pre class="language-js"><code>
 
 </code></pre>
-                <h3 id="intro5-3" class="page-header">필드 삭제하기</h3>
+                <h3 id="intro6-3" class="page-header">필드 삭제하기</h3>
                     <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 DROP 삭제할 필드명
                     </div>
 <pre class="language-js"><code>
 
