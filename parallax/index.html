@@ -47,30 +47,36 @@
         }
 
         /* section1__bg */
-        .section1__bg img {
-            width: 70%;
-            height: 17vh;
-            width: 100%;
-            height: 100vh;
+        .section1_bg img {
+            width: 60%;
+            height: 17vh;           
+            /* height: 100vh; */
         }
         .section1_text1 {
             color: #fff;
             font-size: 7vw;
-            transform: scale(0);
+            transform: translate(-50%, -50%) scale(0);
         }
         .section1_text2 {
             color: #fff;
             font-size: 7vw;
-            transform: scale(1);
-            white-space: nowrap;
             font-weight: 500;
+            transform: translate(-50%, -50%) scale(0);
+            white-space: nowrap;
         }
         .section1_text3 {
             color: #fff;
             font-size: 7vw;
-            transform: scale(1);
+            font-weight: 500;
+            transform: translate(-50%, -50%) scale(0);
             white-space: nowrap;
-            font-weight: 700;
+        }
+        .section1_text4 {
+            color: #fff;
+            font-size: 7vw;
+            font-weight: 500;
+            transform: translate(-50%, -50%) scale(1);
+            white-space: nowrap;
         }
 
         /* section2 */
@@ -82,12 +88,13 @@
         .section2_text1 {
             font-size: 4vw;
             color: #fff;
+            transform: translate(-50%, -50%) scale(1);
             white-space: nowrap;
         }
-        .section2_img {
+        .section2_img1 {
             width: 70vw;
             top: 80%;
-            background: rgba(255, 255, 255, 0.4);
+            /* background: rgba(255, 255, 255, 0.4); */
         }
         .section2_img1_site {
             position: absolute;
@@ -95,16 +102,21 @@
             top: 1.5vw;
             transform: translate(-50%);
             width: 55vw;
-            height: calc(100% - 10vw);
+            height: calc(100% - 5vw);
             /* background: rgba(0, 0, 0, 0.4);  */
             /* border: 1px solid #fff; */
             border-radius: 1vw 1vw 0 0;
             overflow: hidden;
         }
-        .section2_text2 {
+        /* .section2_text2 {
             font-size: 3vw;
             color: #fff;
             white-space: nowrap;
+        } */
+
+        .scroll {
+            position: absolute;
+            top: 0;
         }
     </style>
 </head>
@@ -113,16 +125,16 @@
     <div class="scrollTop">0</div>
     <div id="content">
         <section id="section1"
-            data-8500 = "display: block"
-            data-8501 = "display: none"
+            data-8500 = "display: block;"
+            data-8501 = "display: none;"
             >
-            <div class="section1__bg">
-                <img class="fixed" src="img/yeshi-kangrang-EV9Io66tDm0-unsplash.jpg" alt="이미지"
+            <div class="section1_bg">
+                <img class="fixed" src="img/down.jpg" alt="이미지"
                     data-0 = "width: 70%; height: 17vh"
                     data-1000 = "width: 100%; height: 17vh"
                     data-2000 = "width: 100%; height: 50vh"
-                    data-7000 = "width: 100%; height: 50vh"
-                    data-8000 = "width: 100%; height: 0vh"
+                    data-8000 = "width: 100%; height: 50vh"
+                    data-9000 = "width: 100%; height: 0vh"
                 >
             </div>
             <div class="section1_text1 fixed"            
@@ -133,14 +145,14 @@
             >Down the Rabbit-Hole</div>
 
             <div class="section1_text2 fixed"            
-                data-3000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%";
+                data-3000 = "transform: translate(-50%, -50%) scale(1); top: 100%";
                 data-4000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%";
                 data-5000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%";
-                data-6000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: -10%";
+                data-6000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: -50%";
             >The Pool of Tears</div>
 
             <div class="section1_text3 fixed"            
-                data-5000 = "transform: translate(-50%, -50%) scale(1); left: 100%";
+                data-5000 = "transform: translate(-50%, -50%) scale(0); left: 100%";
                 data-6000 = "transform: translate(-50%, -50%) scale(1); left: 50%";
                 data-7000 = "transform: translate(-50%, -50%) scale(1); left: 50%";
                 data-8000 = "transform: translate(-50%, -50%) scale(1); left: -50%";
@@ -154,25 +166,32 @@
             >
         <section id="section2">
             <div class="section2_bg fixed"
-                data-9000 = "width: 100%; height: 0vh; border-radius: 500px"
+                data-9000 = "width: 0%; height: 0vh; border-radius: 500px"
                 data-10000 = "width: 100%; height: 100vh; border-radius: 0px"
             ></div>
             <div class="section2_text1 fixed"
-                data-8500 = "transform: translate(-50%, -50%) scale(0.8)"
-                data-10500 = "transform: translate(-50%, -50%) scale(1)"
-                data-11500 = "transform: translate(-50%, -500%) scale(1)"
+                data-8500 = "transform: translate(-50%, -50%); scale(0.8); top: 50%"
+                data-10500 = "transform: translate(-50%, -50%); scale(1); top: 50%"
+                data-11500 = "transform: translate(-50%, -500%); scale(1); top: 10%"
             >The rabbit-hole went straight on like a tunnel</div>
+
             <div class="section2_img1 fixed"
-                data-11000 = "top: 200%;"
-                data-12000 = "top: 70%;">            
-                <img src="img/MacBookPro13.png" alt="macbook">                
+                data-10000 = "transform: translate(-50%, -50%); scale(0.8); top: 200%;"
+                data-11000 = "transform: translate(-50%, -50%); scale(1); top: 100%;"
+                data-12000 = "transform: translate(-50%, -50%); scale(1); top: 60%;">            
+                <img src="img/MacBookPro13.png" alt="이미지">                
                 <div class="section2_img1_site">                    
-                    <div class="move"
+                    <div class="scroll"
                     data-12000 = "top: 0%;"
-                    data-13000 = "top: -35%;"
+                    data-13000 = "top: -350%;"
                     >
                         <img src="img/site_design.jpg" alt="사이트01"></div>
                 </div>
+            </div>
+            <!-- <div class="section2_text2 fixed"
+                data-12000="opacity: 0; top:50%"
+                data-12500="opacity: 1; top:26%"
+            > -->
             </div>
         </section>
         <!-- //section2 -->
