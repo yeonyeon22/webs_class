@@ -502,28 +502,46 @@ Empty set (0.00 sec)
 
 
 
-
-
-
-
-
-
-
-
-
                     <h3 id="intro7-3" class="page-header">데이터 수정하기</h3>
                     <div class="bs-callout bs-callout-info">
-                        
+                        UPDATE 테이블명 SET 컬럼명 조건
                     </div>
-<pre class="language-js"><code></code></pre>
+                    <h4 class="pt20">모든 회원의 비밀번호를 '1234'로 변경</h4>
+<pre class="language-js"><code>UPDATE myMember SET youPass = "1234";</code></pre>
+
+                    <h4 class="pt20">5회원부터 10회원까지 비밀번호를 '1234567'로 변경</h4>
+<pre class="language-js"><code>UPDATE myMember SET youPass = "1234567" WHERE memberID BETWEEN 5 AND 10;</code></pre>
+
+                    <h4 class="pt20">아이디 내림차순</h4>
+<pre class="language-js"><code>UPDATE myMember SET youPass = "****" ORDER BY memberID DESC LIMIT 10;</code></pre>
+
+
+
 
                     <h3 id="intro7-4" class="page-header">데이터 삭제하기</h3>
+                    <h4>전체 데이터 삭제</h4>
                     <div class="bs-callout bs-callout-info">
-                        
+                        DELETE FROM 테이블명 or DELETE * FROM 테이블명
                     </div>
-<pre class="language-js"><code>
+<pre class="language-js"><code>DELETE FROM myMember</code></pre>
 
-</code></pre>
+                    <h4 class="pt20">조건 데이터 삭제</h4>
+                    <div class="bs-callout bs-callout-info">
+                        DELETE FROM 테이블명 조건
+                    </div>
+                    <h4 class="pt20">조건 삭제 : 회원 아이디가 5번인 멤버를 삭제(탈퇴)</h4>
+<pre class="language-js"><code>DELETE FROM myMember WHERE memberID = 5;</code></pre>
+
+                    <h4 class="pt20">조건 삭제 : 패스워드가 '****'인 멤버를 삭제(탈퇴)</h4>
+<pre class="language-js"><code>DELETE FROM myMember WHERE youPass = '****';</code></pre>
+
+                    <h4 class="pt20">정렬 삭제 : 이름을 기준으로 5번째까지 멤버를 삭제(탈퇴)</h4>
+<pre class="language-js"><code>DELETE FROM myMember ORDER BY youName LIMIT 5;</code></pre>
+
+                    <h4 class="pt20">지정 삭제 : 지정한 멤버를 삭제(탈퇴)</h4>
+<pre class="language-js"><code>DELETE FROM myMember WHERE memberID IN(8, 9, 10);</code></pre>
+
+
                 </div>
                 <!-- //box -->
 

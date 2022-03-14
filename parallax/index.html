@@ -85,8 +85,26 @@
             white-space: nowrap;
         }
         .section2_img {
-            width: 50vw;
+            width: 70vw;
             top: 80%;
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .section2_img1_site {
+            position: absolute;
+            left: 50%;
+            top: 1.5vw;
+            transform: translate(-50%);
+            width: 55vw;
+            height: calc(100% - 10vw);
+            /* background: rgba(0, 0, 0, 0.4);  */
+            /* border: 1px solid #fff; */
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+        .section2_text2 {
+            font-size: 3vw;
+            color: #fff;
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -142,10 +160,19 @@
             <div class="section2_text1 fixed"
                 data-8500 = "transform: translate(-50%, -50%) scale(0.8)"
                 data-10500 = "transform: translate(-50%, -50%) scale(1)"
-            >A Mad Tea-Party</div>
-            <div class="section2_img">
-                <img src="img/MacBook Pro 13.png" alt="이미지">
-
+                data-11500 = "transform: translate(-50%, -500%) scale(1)"
+            >The rabbit-hole went straight on like a tunnel</div>
+            <div class="section2_img1 fixed"
+                data-11000 = "top: 200%;"
+                data-12000 = "top: 70%;">            
+                <img src="img/MacBookPro13.png" alt="macbook">                
+                <div class="section2_img1_site">                    
+                    <div class="move"
+                    data-12000 = "top: 0%;"
+                    data-13000 = "top: -35%;"
+                    >
+                        <img src="img/site_design.jpg" alt="사이트01"></div>
+                </div>
             </div>
         </section>
         <!-- //section2 -->
