@@ -679,7 +679,7 @@
         // 함수 유형 : 함수와 매개변수를 이용한 형태
         {
             function func(num, name, job){
-                document.write(num + ". 내 이름은 " + name + "이며 사는 곳은 " + job + "입니다.");
+                document.write(num + ". 내 이름은 " + name + "이며 하는 것은 " + job + "짓입니다.");
             }
             func("1", "고양이", "백수");
             func("2", "개", "건달");
@@ -692,10 +692,10 @@
                 document.write(num + ". 내 이름은 " + name + "이며 사는 곳은 " + job + "입니다.");
             }
             const youNum1 = "1";
-            const youName1 = "yoon";
+            const youName1 = "bori";
             const youJob1 = "Jeju";
             const youNum2 = "2";
-            const youName2 = "soon";
+            const youName2 = "cookie";
             const youJob2 = "Newyork";
 
             func(youNum1, youName1, youJob1);
@@ -716,7 +716,7 @@
                     job : "nothing"
                 }, {
                     num : "2",
-                    name : "na",
+                    name : "me",
                     job : "anyting"
                 }
             ]
@@ -731,11 +731,11 @@
         {
             const info = {
                 num1: 1,
-                name1: "보리",
-                job1: "백수",
+                name1: "Anne",
+                job1: "princess",
                 num2: 2,
-                name2: "유나",
-                job2: "건달",
+                name2: "Elsa",
+                job2: "queen",
                 result1: function(){
                     document.write(this.num1 + ". 내 이름은 " + this.name1 + "이며 직업은 " + this.job1 + "입니다.");
                 },
@@ -783,7 +783,7 @@
            
             //인스턴스 생성
             const info1 = new func("1", "보리", "개");
-            const info2 = new func("2", "유나", "개");
+            const info2 = new func("2", "유나", "강아지");
 
             info1.result1();
             info2.result2();
@@ -830,7 +830,7 @@
             }
 
             const info1 = new study("1", "보리", "건달");
-            const info2 = new study("2", "쿠키", "백수");
+            const info2 = new study("2", "쿠키", "양아치");
 
             info1.result1();
             info2.result2();
