@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+    
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+   
+   
+    <script>
+        
+        const mouseImg = document.querySelectorAll(".mouse__img");
+
+        mouseImg.forEach((item) => {
+            const imageWrap = item.querySelector(".img");
+            const imageWrapBounds = imageWrap.getBoundingClientRect();
+            let itemBounds = item.getBoundingClientRect();
+
+            const onMouseEnter = () => {
+                gsap.set(imageWrap, { xPercent: -50, yPercent: 50, rotation: -15, scale: 0.3, opacity: 0});
+                gsap.to(imageWrap, { xPercent: -50, yPercent: -50, rotation: -0, scale: 1, opacity: 1});
+            };
+
+            const onMouseLeave = () => {
+                gsap.to(imageWrap, {xPercent: -50, yPercent:-100, rotation: 15, scale: 0.3, opacity: 0});
+            };
+
+            const onMouseMove = ({x, y}) => {
+                gsap.to(imageWrap, {
+                    duration: 1.25,
+                    x: Math.abs(x - itemBounds.left),
+                    y: Math.abs(y - itemBounds.top),
+                })
+
+                console.log(x)
+            }
+
+            item.addEventListener("mouseenter", onMouseEnter);
+            item.addEventListener("mouseleave", onMouseLeave);
+            item.addEventListener("mousemove", onMouseMove);
+
+        });
+        
+
+    </script>
+</body>
+
+</html>

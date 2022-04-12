@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+    <link rel="stylesheet" href="css/NexonLv1Gothic.css">
+    <link rel="stylesheet" href="css/dracula.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+        .nothing1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 45px;line-height: -1.5;text-align: center;
+            margin:auto;position: absolute;left: 0;top: 0;right: 0;
+            bottom: 0;width: 600px;height: 600px;
+        }
+        .nothing2 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 25px;line-height: -1;text-align: center;
+            margin:auto;position: absolute;left: 0;top: 0;right: 0;
+            bottom: 0;width: 500px;height: 400px;
+        }
+        #bg {
+            position: fixed;top: 0;left: 0;width: 100%;height: 100%;
+            transition: all 0.3s ease-out;
+            background:
+            linear-gradient(to left, #c04dcaa7 0%, #941a419c 99%, #5c5b9182 100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- main -->
+    <main>
+        <section id="mouseType08">
+            <div id="bg">
+                <p class="nothing1">Don't look back in anger</p>
+                <p class="nothing2">
+                    
+                    Take me to the place where you go<br>
+                    Where nobody knows<br>
+                    If it's night or day<br>
+                
+                
+                    Take that look from off your face<br>
+                    'Cause you ain't ever gonna burn my heart out<br>
+                
+                    
+                    So Sally can wait<br>
+                    She knows it's too late<br>
+                    As she's walking on by<br>
+                    My soul slides away<br>
+                    But don't look back in anger<br>
+                    Don't look back in anger<br>
+                    I heard you say<br>
+                    At least not today
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+   
+    <!-- info -->
+    <div class="info">
+        <div class="title">
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect08</a></h1>
+            <p>_nothing</p>
+        </div>
+        <div class="number">
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li class="active"><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- //info -->
+    
+    <!-- script -->
+    <script src="js/highlight.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script>
+        
+
+        var blendAmount = 70;
+        var delay = -10;
+        var windowWidth = window.innerWidth;
+        var bg = document.getElementById("bg");
+
+        document.onmousemove = function(e){
+            mouseX = Math.round(e.pageX / windowWidth * 100 - delay);
+            
+            col1 = mouseX - blendAmount;
+            col2 = mouseX + blendAmount;
+            
+            bg.style.background = "linear-gradient(to left, #c04dcaa7 "+ col1 +"%, #5c5b9182 "+ col2 +"%)";
+        }
+    </script>
+</body>
+
+</html>
